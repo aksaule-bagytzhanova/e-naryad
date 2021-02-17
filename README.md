@@ -7,6 +7,9 @@ Description: Web page for interaction between employees in big company. The key 
 - Ability to write progress report
 
 **Team members:**
+
 Bagytzhanova Aksaule
+
 Baturhanova Aida
+
 Kurmangalieva Madina
