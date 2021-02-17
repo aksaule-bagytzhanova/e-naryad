@@ -8,8 +8,6 @@ Description: Web page for interaction between employees in big company. The key 
 
 **Team members:**
 
-Bagytzhanova Aksaule
-
-Baturhanova Aida
-
-Kurmangalieva Madina
+- Bagytzhanova Aksaule
+- Baturhanova Aida
+- Kurmangalieva Madina
