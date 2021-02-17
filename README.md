@@ -13,19 +13,30 @@ Description: Web page for interaction between employees in big company. The key 
 - Kurmangalieva Madina
 
 ## Website Pages
-1. Login page
+1. **Login page**
 
 Employee authorization
 
-2. E-naryad
+2. **E-naryad**
 
 This is the main page that shows all the latest news, which outfits have been submitted for confirmation with dates, the number of completed outfits and the number of completed work.
 
-3. Order
+3. **Order**
+
+Drawing up and registering the work done for confirmation 
+
+4. **Service passport**
+
+Drawing up and creating a service passport. In total, 6 passports and an archive of passports.
+
+5. **Efficiency calculation**
+
+The page where it shows what costs were and statistics on it.
+
+6. **Admin panel**
+
+Member admin page, personal data, employee photo.
+
+7. **Posts**
 
 
-
-5. Service passport
-6. Efficiency calculation
-7. Admin panel
-8. Posts
