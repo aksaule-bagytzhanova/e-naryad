@@ -1,0 +1,200 @@
+Dis_Journal_Id,Employee_Id,Technical_Activities,Place_Name_Of_Work,Supervising,Team_Members_Working_On_Orders,Person_Who_Gave_Outfit,Started_Work,Work_Done
+1,1,workplace preparation,ONEOK NGL PIPELINE LP,"Adinolfi, Wilson  K","Abedin,Huma M.",NATHANIEL FORD,5/17/2016 20:04:18,2016-06-14 12:00:00
+2,2,voltage relief,PORTLAND PIPELINE CORP,"Ait Sidi, Karthikeyan   ","Abrams,Lori E.",GARY JIMENEZ,5/17/2016 20:04:30,2016-06-14 13:00:00
+3,3,putting up security posters,"PETROLOGISTICS OLEFINS, LLC","Akinkuolie, Sarah","Alcorn,Brian A.",ALBERT PARDINI,5/17/2016 20:04:58,2016-06-14 14:00:00
+4,4,checking for no voltage,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Alagbe,Trina","Allen,Jeannetta Pam",CHRISTOPHER CHONG,5/17/2016 20:08:01,2016-06-14 15:00:00
+5,5,installing ground connections,"PLAINS PIPELINE, L.P.","Anderson, Carol ","Allison,Donna Tate",PATRICK GARDNER,5/17/2016 20:08:04,2016-06-14 16:00:00
+6,6,workplace preparation,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Anderson, Linda  ","Alston,Mildred C.",DAVID SULLIVAN,5/17/2016 20:09:09,2016-06-14 17:00:00
+7,7,voltage relief,"KINDER MORGAN LIQUID TERMINALS, LLC","Andreola, Colby","Alterescu,Louis",ALSON LEE,5/17/2016 20:10:56,2016-06-14 18:00:00
+8,8,putting up security posters,MOBIL CORP,"Athwal, Sam","Amador,Patricia",DAVID KUSHNER,5/17/2016 20:11:13,2016-06-14 19:00:00
+9,9,checking for no voltage,"KINDER MORGAN LIQUID TERMINALS, LLC","Bachiochi, Linda","Amorsingh,Lucius Linus",MICHAEL MORRIS,5/17/2016 20:11:52,2016-06-14 20:00:00
+10,10,installing ground connections,CONOCOPHILLIPS,"Bacong, Alejandro ","Anders,Brenda",JOANNE HAYES-WHITE,5/17/2016 20:13:37,2016-06-14 21:00:00
+11,11,workplace preparation,TARGA RESOURCES OPERATING LP,"Baczenski, Rachael  ","Anderson,Lori Lynn",ARTHUR KENNEY,5/17/2016 20:17:40,2016-06-14 22:00:00
+12,12,voltage relief,"NUSTAR LOGISTICS, L.P.","Barbara, Thomas","Attie,Eli G.",PATRICIA JACKSON,5/17/2016 20:18:37,2016-06-14 23:00:00
+13,13,putting up security posters,JAYHAWK PIPELINE LLC,"Barbossa, Hector","Aversano,Gene T.",EDWARD HARRINGTON,5/17/2016 20:26:57,2016-06-15 0:00:00
+14,14,workplace preparation,CONOCOPHILLIPS,"Barone, Francesco  A","Bachman,Robin J.",JOHN MARTIN,5/17/2016 20:30:21,2016-06-15 1:00:00
+15,15,voltage relief,"PLAINS MARKETING, L.P.","Barton, Nader","Baer,Christine Klima",DAVID FRANKLIN,5/17/2016 20:30:26,2016-06-15 2:00:00
+16,16,putting up security posters,"CCPS TRANSPORTATION, LLC","Bates, Norman","Baer,Donald A.",RICHARD CORRIEA,5/17/2016 20:30:49,2016-06-15 3:00:00
+17,17,checking for no voltage,"MAGELLAN AMMONIA PIPELINE, L.P.","Beak, Kimberly  ","Bailey,Yvonne G.",AMY HART,5/17/2016 20:32:26,2016-06-15 4:00:00
+18,18,installing ground connections,"SHELL PIPELINE CO., L.P.","Beatrice, Courtney ","Baker,Kyle M.",SEBASTIAN WONG,5/17/2016 20:34:35,2016-06-15 5:00:00
+19,19,workplace preparation,"KINDER MORGAN LIQUID TERMINALS, LLC","Becker, Renee","Balderston,Kris M.",MARTY ROSS,5/17/2016 20:39:14,2016-06-15 6:00:00
+20,20,voltage relief,"KOCH PIPELINE COMPANY, L.P.","Becker, Scott","Baldick,Nicholas R.",ELLEN MOFFATT,5/17/2016 20:40:22,2016-06-15 7:00:00
+21,21,putting up security posters,KIANTONE PIPELINE CORP,"Bernstein, Sean","Band,Douglas J.",VENUS AZAR,5/17/2016 20:41:29,2016-06-15 8:00:00
+22,22,checking for no voltage,PACIFIC PIPELINE SYSTEM LLC,"Biden, Lowan  M","Barclay,Barbara A.",JUDY MELINEK,5/17/2016 20:42:09,2016-06-15 9:00:00
+23,23,installing ground connections,JAYHAWK PIPELINE LLC,"Billis, Helen","Barksdale,Antoinette",GEORGE GARCIA,5/17/2016 20:42:10,2016-06-15 10:00:00
+24,24,workplace preparation,"TE PRODUCTS PIPELINE COMPANY, LLC","Blount, Dianna","Barnes,Beverly L.",VICTOR WYRSCH,5/17/2016 20:44:36,2016-06-15 11:00:00
+25,25,voltage relief,"MAGELLAN PIPELINE COMPANY, LP","Bondwell, Betsy","Barry,Kathleen A.",JOSEPH DRISCOLL,5/17/2016 20:46:31,2016-06-15 12:00:00
+26,26,putting up security posters,EXPLORER PIPELINE CO,"Booth, Frank","Bass,Walker F.",GREGORY SUHR,5/17/2016 20:48:14,2016-06-15 13:00:00
+27,27,workplace preparation,PACIFIC PIPELINE SYSTEM LLC,"Boutwell, Bonalyn","Bates,Melinda N.",JOHN HANLEY,5/17/2016 20:48:28,2016-06-15 14:00:00
+28,28,voltage relief,PLANTATION PIPE LINE CO,"Bozzi, Charles","Bean,Eileen F.",RAYMOND GUZMAN,5/17/2016 20:59:07,2016-06-15 15:00:00
+29,29,putting up security posters,PLANTATION PIPE LINE CO,"Brill, Donna","Beaubaire,David S.",DENISE SCHMITT,5/17/2016 21:00:47,2016-06-15 16:00:00
+30,30,checking for no voltage,NUSTAR PIPELINE OPERATING PARTNERSHIP L.P.,"Brown, Mia","Bedwell,Wendy Lynette",MONICA FIELDS,5/17/2016 21:01:09,2016-06-15 17:00:00
+31,31,installing ground connections,"TE PRODUCTS PIPELINE COMPANY, LLC","Buccheri, Joseph  ","Belsky,David",HARLAN KELLY-JR,5/17/2016 21:08:26,2016-06-15 18:00:00
+32,32,workplace preparation,LOOP INC,"Bugali, Josephine ","Bennett,Jacquelyn J.",DAVID SHINN,5/17/2016 21:15:34,2016-06-15 19:00:00
+33,33,voltage relief,"SHELL PIPELINE CO., L.P.","Bunbury, Jessica","Berger,Samuel R.",GARY AMELIO,5/17/2016 21:16:35,2016-06-15 20:00:00
+34,34,putting up security posters,BELLE FOURCHE PIPELINE CO,"Burke, Joelle","Berry,Marsha E.",JOHN TURSI,5/17/2016 21:25:17,2016-06-15 21:00:00
+35,35,checking for no voltage,SEMGROUP LP,"Burkett, Benjamin ","Beveridge,Susan",JOSE VELO,5/17/2016 21:34:10,2016-06-15 22:00:00
+36,36,installing ground connections,WEST SHORE PIPELINE CO,"Cady, Max ","Bianchi,Sarah Abigail",KHOA TRINH,5/17/2016 21:38:39,2016-06-15 23:00:00
+37,37,workplace preparation,"MAGELLAN PIPELINE COMPANY, LP","Candie, Calvin","Binns,Mary U.",SUSAN CURRIN,5/17/2016 21:39:26,2016-06-16 0:00:00
+38,38,voltage relief,"SHELL PIPELINE CO., L.P.","Carabbio, Judith","Bird,Debra D.",JAMES BOSCH,5/17/2016 21:45:04,2016-06-16 1:00:00
+39,39,putting up security posters,PLANTATION PIPE LINE CO,"Carey, Michael  ","Blinken,Antony J.",JONES WONG,5/17/2016 21:45:35,2016-06-16 2:00:00
+40,40,workplace preparation,"BUCKEYE PARTNERS, LP","Carr, Claudia  N","Blocker,Ananias,III",BRENDAN WARD,5/17/2016 21:55:53,2016-06-16 3:00:00
+41,41,voltage relief,"MAGELLAN PIPELINE COMPANY, LP","Carter, Michelle ","Blunt,Shenna C.",MICHAEL THOMPSON,5/17/2016 21:57:20,2016-06-16 4:00:00
+42,42,putting up security posters,"MAGELLAN PIPELINE COMPANY, LP","Chace, Beatrice ","Bohrer,George H.",THOMAS ABBOTT,5/17/2016 22:01:48,2016-06-16 5:00:00
+43,43,checking for no voltage,"BUCKEYE PARTNERS, LP","Champaigne, Brian","Bowles,Erskine B.",THOMAS SIRAGUSA,5/17/2016 22:12:58,2016-06-16 6:00:00
+44,44,installing ground connections,SUNOCO PIPELINE L.P.,"Chan, Lin","Breuer,Lanny A.",MICHAEL THOMPSON,5/17/2016 22:14:11,2016-06-16 7:00:00
+45,45,workplace preparation,"PLAINS PIPELINE, L.P.","Chang, Donovan  E","Briggs,Patrick Edward Jude",SHARON MCCOLE WICHER,5/17/2016 22:15:22,2016-06-16 8:00:00
+46,46,voltage relief,LDH ENERGY PIPELINE L.P.,"Chigurh, Anton","Bromberg,Emily",EDWIN LEE,5/17/2016 22:19:27,2016-06-16 9:00:00
+47,47,putting up security posters,CONOCOPHILLIPS,"Chivukula, Enola","Brophy,Susan A.",BRYAN RUBENSTEIN,5/17/2016 22:20:28,2016-06-16 10:00:00
+48,48,checking for no voltage,ONEOK NGL PIPELINE LP,"Cierpiszewski, Caroline  ","Brown,Margueritte B.",TRENT RHORER,5/17/2016 22:23:12,2016-06-16 11:00:00
+49,49,installing ground connections,ONEOK NGL PIPELINE LP,"Clayton, Rick","Burkhardt,Daniel W.",JAMES DUDLEY,5/17/2016 22:25:40,2016-06-16 12:00:00
+50,50,workplace preparation,COLONIAL PIPELINE CO,"Cloninger, Jennifer","Button,Katharine M.",KEN YEE,5/17/2016 22:29:37,2016-06-16 13:00:00
+51,51,voltage relief,MID - VALLEY PIPELINE CO,"Close, Phil","Byrd,Kimberley J.",KIRK RICHARDSON,5/17/2016 22:33:23,2016-06-16 14:00:00
+52,52,putting up security posters,ENBRIDGE PIPELINES (NORTH DAKOTA) LLC,"Clukey, Elijian","Cameron,Rebecca A.",BARBARA GARCIA,5/17/2016 22:33:51,2016-06-16 15:00:00
+53,53,workplace preparation,"CHAPARRAL ENERGY, LLC","Cockel, James","Campbell,Frances L.",MICHAEL ROLOVICH,5/17/2016 22:38:33,2016-06-16 16:00:00
+54,54,voltage relief,ENTERPRISE PRODUCTS OPERATING LLC,"Cole, Spencer","Canter,Virginia R.",DARRYL HUNTER,5/17/2016 22:42:00,2016-06-16 17:00:00
+55,55,putting up security posters,COLONIAL PIPELINE CO,"Corleone, Michael","Caplan,Phillip",RAY CRAWFORD,5/17/2016 22:43:42,2016-06-16 18:00:00
+56,56,checking for no voltage,EXXONMOBIL PIPELINE CO,"Corleone, Vito","Capps,Laura Karolina",KEVIN CASHMAN,5/17/2016 22:44:08,2016-06-16 19:00:00
+57,57,installing ground connections,SINCLAIR TRANSPORTATION COMPANY,"Cornett, Lisa ","Caramanica,Janice",BENJAMIN ROSENFIELD,5/17/2016 22:46:53,2016-06-16 20:00:00
+58,58,workplace preparation,"MAGELLAN PIPELINE COMPANY, LP","Costello, Frank","Carey,Paul R.",MARK KEARNEY,5/17/2016 22:49:46,2016-06-16 21:00:00
+59,59,voltage relief,SUNOCO PIPELINE L.P.,"Crimmings,   Jean","Carter,Cheryl M. Cole",DOUGLAS RIBA,5/17/2016 22:51:33,2016-06-16 22:00:00
+60,60,putting up security posters,SUNOCO PIPELINE L.P.,"Cross, Noah","Castleman,Helen S.",AI-KYUNG CHUNG,5/17/2016 22:52:38,2016-06-16 23:00:00
+61,61,checking for no voltage,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Daneault, Lynn","Cattalini,Ann Marie",KENNETH SMITH,5/17/2016 22:55:50,2016-06-17 0:00:00
+62,62,installing ground connections,"MAGELLAN PIPELINE COMPANY, LP","Daniele, Ann  ","Chai,David K.",ANNA BROWN,5/17/2016 22:56:02,2016-06-17 1:00:00
+63,63,workplace preparation,SUNOCO PIPELINE L.P.,"Darson, Jene'ya ","Chirwa,Dawn M.",JAMES FAZACKERLEY,5/17/2016 23:00:07,2016-06-17 2:00:00
+64,64,voltage relief,"TEPPCO CRUDE PIPELINE, LLC","Davis, Daniel","Chow,Barbara",CHARLES CRANE,5/17/2016 23:08:07,2016-06-17 3:00:00
+65,65,putting up security posters,SUNOCO PIPELINE L.P.,"Dee, Randy","Cicetti,Pamela",GREGORY MAR,5/17/2016 23:09:12,2016-06-17 4:00:00
+66,66,workplace preparation,"SFPP, LP","DeGweck,  James","Clarke,Senoria K.",RICHARD PARRY,5/17/2016 23:09:32,2016-06-17 5:00:00
+67,67,voltage relief,ENBRIDGE PIPELINES (OZARK) L.L.C.,"Del Bosque, Keyla","Cleveland,Carolyn E.",ROBERT POSTEL,5/17/2016 23:12:04,2016-06-17 6:00:00
+68,68,putting up security posters,PACIFIC PIPELINE SYSTEM LLC,"Delarge, Alex","Cogdell,C. Patricia",EDWARD ROLAND,5/17/2016 23:13:32,2016-06-17 7:00:00
+69,69,checking for no voltage,BP PIPELINE (NORTH AMERICA) INC.,"Demita, Carla","Cohen,Steven A.",THOMAS SHAWYER,5/17/2016 23:13:58,2016-06-17 8:00:00
+70,70,installing ground connections,BP PIPELINE (NORTH AMERICA) INC.,"Desimone, Carl ","Conroy,Mary R.",WING CHAN,5/17/2016 23:15:14,2016-06-17 9:00:00
+71,71,workplace preparation,COLONIAL PIPELINE CO,"DeVito, Tommy","Corbett,Julianne B.",GEORGE GASCON,5/17/2016 23:16:50,2016-06-17 10:00:00
+72,72,voltage relief,CONOCOPHILLIPS,"Dickinson, Geoff ","Cornelius,Catherine A.",RICHARD BUSALACCHI,5/17/2016 23:16:59,2016-06-17 11:00:00
+73,73,putting up security posters,ENBRIDGE PIPELINES (OZARK) L.L.C.,"Dietrich, Jenna  ","Costello,Brenda B.",LAWRENCE FREED,5/17/2016 23:19:44,2016-06-17 12:00:00
+74,74,checking for no voltage,PLANTATION PIPE LINE CO,"DiNocco, Lily ","Cozart,Charlene C.",MONIQUE MOYER,5/17/2016 23:22:00,2016-06-17 13:00:00
+75,75,installing ground connections,"SUNOCO, INC (R&M)","Dobrin, Denisa  S","Crable,Lynn Allison",ANTONIO FLORES,5/17/2016 23:22:46,2016-06-17 14:00:00
+76,76,workplace preparation,"WHITECAP PIPE LINE COMPANY, L.L.C.","Dolan, Linda","Craighead,Kelly",MARK GAMBLE,5/17/2016 23:24:12,2016-06-17 15:00:00
+77,77,voltage relief,CONOCOPHILLIPS,"Dougall, Eric","Crisci,Michelle",KEVIN BURKE,5/17/2016 23:28:48,2016-06-17 16:00:00
+78,78,putting up security posters,PROGRESS ENERGY,"Driver, Elle","Croft,Caroline",BERT REYES,5/17/2016 23:29:37,2016-06-17 17:00:00
+79,79,workplace preparation,CONOCOPHILLIPS,"Dunn, Amy  ","Cunningham,Nelson W.",MICHAEL DELANE,5/17/2016 23:29:47,2016-06-17 18:00:00
+80,80,voltage relief,"BUCKEYE PARTNERS, LP","Dunne, Amy","Curiel,Carolyn",EDUARDO GONZALEZ,5/17/2016 23:33:57,2016-06-17 19:00:00
+81,81,putting up security posters,ENTERPRISE PRODUCTS OPERATING LLC,"Eaton, Marianne","Currie,Betty W.",YIFANG QIAN,5/17/2016 23:34:25,2016-06-17 20:00:00
+82,82,checking for no voltage,COLONIAL PIPELINE CO,"Engdahl, Jean","Curtis,Janet F.",ROBERT WINSLOW,5/17/2016 23:34:44,2016-06-17 21:00:00
+83,83,installing ground connections,KINDER MORGAN PIPELINES (USA) INC,"England, Rex","Cushing,Anna E.",LORRIE KALOS,5/17/2016 23:48:02,2016-06-17 22:00:00
+84,84,workplace preparation,"MAGELLAN PIPELINE COMPANY, LP","Erilus, Angela","Cutler,Lynn G.",EDWARD REISKIN,5/17/2016 23:50:25,2016-06-17 23:00:00
+85,85,voltage relief,"BRIDGER LAKE, LLC","Estremera, Miguel","Dale,Suzanne",JEFFREY MYERS,5/17/2016 23:55:09,2016-06-18 0:00:00
+86,86,putting up security posters,SUNOCO PIPELINE L.P.,"Evensen, April","Daniels,Brenda J.",JONATHAN BAXTER,5/17/2016 23:58:39,2016-06-18 1:00:00
+87,87,checking for no voltage,CHEVRON PIPE LINE CO,"Exantus, Susan","Dass,Lisa R.",MICHAEL BRYANT,5/17/2016 23:59:22,2016-06-18 2:00:00
+88,88,installing ground connections,CHEVRON PRODUCTS COMPANY,"Faller, Megan ","Davis,Lanny Jesse",KEVIN BARRY,5/18/2016 0:02:54,2016-06-18 3:00:00
+89,89,workplace preparation,"MAGELLAN PIPELINE COMPANY, LP","Fancett, Nicole","Del Sesto,Gino J.",EVETTE GEER-STEVENS,5/18/2016 0:03:12,2016-06-18 4:00:00
+90,90,voltage relief,CONOCOPHILLIPS,"Ferguson, Susan","Demeo,Laura K.",MARY TSE,5/18/2016 0:05:28,2016-06-18 5:00:00
+91,91,putting up security posters,"PLAINS PIPELINE, L.P.","Fernandes, Nilson  ","Dickey,Lana H.",MARK GONZALES,5/18/2016 0:07:31,2016-06-18 6:00:00
+92,92,workplace preparation,SUNOCO PIPELINE L.P.,"Fett, Boba","Digiacobbe,Marilyn",DONNA MEIXNER,5/18/2016 0:10:56,2016-06-18 7:00:00
+93,93,voltage relief,PLANTATION PIPE LINE CO,"Fidelia,  Libby","Dominguez,Marie Theresa",PETE FAY JR,5/18/2016 0:11:13,2016-06-18 8:00:00
+94,94,putting up security posters,"TE PRODUCTS PIPELINE COMPANY, LLC","Fitzpatrick, Michael  J","Donnelly,Raymond E.,III",JOHN MURPHY,5/18/2016 0:14:54,2016-06-18 9:00:00
+95,95,checking for no voltage,EXPLORER PIPELINE CO,"Foreman, Tanya","Dorskind,James A.",REX HALE,5/18/2016 0:15:10,2016-06-18 10:00:00
+96,96,installing ground connections,EXXONMOBIL PIPELINE CO,"Forrest, Alex","Doufekias,Dimitra",MIVIC HIROSE,5/18/2016 0:22:00,2016-06-18 11:00:00
+97,97,workplace preparation,VALERO TERMINALING AND DISTRIBUTION COMPANY,"Foss, Jason","Doyle,Patricia Solis",SARAH CARY,5/18/2016 0:23:17,2016-06-18 12:00:00
+98,98,voltage relief,"TE PRODUCTS PIPELINE COMPANY, LLC","Foster-Baker, Amy","Droege,Philip C.",KEVIN SMITH,5/18/2016 0:26:34,2016-06-18 13:00:00
+99,99,putting up security posters,"KOCH PIPELINE COMPANY, L.P.","Fraval, Maruk ","Dudley,Jennifer D.",GREGORY STANGLAND,5/18/2016 0:28:30,2016-06-18 14:00:00
+100,100,checking for no voltage,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Galia, Lisa","Duncan,Charles N.",SONALI BOSE,5/18/2016 0:35:13,2016-06-18 15:00:00
+101,101,installing ground connections,"MAGELLAN PIPELINE COMPANY, LP","Garcia, Raul","Duque,Ana Maria",KEVIN TAYLOR,5/18/2016 0:36:07,2016-06-18 16:00:00
+102,102,workplace preparation,ENTERPRISE PRODUCTS OPERATING LLC,"Gaul, Barbara","Duval,Fred",ERIKA HOO,5/18/2016 0:40:40,2016-06-18 17:00:00
+103,103,voltage relief,MARATHON PIPE LINE LLC,"Gentry, Mildred","Eaglin,Ruth A.",LAUIFI SEUMAALA,5/18/2016 0:40:52,2016-06-18 18:00:00
+104,104,putting up security posters,MARATHON PIPE LINE LLC,"Gerke, Melisa","Echaveste,Maria",EDWARD DENNIS,5/18/2016 0:41:52,2016-06-18 19:00:00
+105,105,workplace preparation,"MAGELLAN PIPELINE COMPANY, LP","Gill, Whitney  ","Eder,Ann T.",PATRIC STEELE,5/18/2016 0:44:01,2016-06-18 20:00:00
+106,106,voltage relief,CHEVRON PIPE LINE CO,"Gilles, Alex","Edmonds,James Terry",MICHAEL WALSH,5/18/2016 0:45:43,2016-06-18 21:00:00
+107,107,putting up security posters,"MAGELLAN AMMONIA PIPELINE, L.P.","Girifalco, Evelyn","Edwards,Anne M.",SAMSON LAI,5/18/2016 0:50:46,2016-06-18 22:00:00
+108,108,checking for no voltage,COLONIAL PIPELINE CO,"Givens, Myriam","Emanuel,Rahm I.",ANA SAMPERA,5/18/2016 0:50:50,2016-06-18 23:00:00
+109,109,installing ground connections,HOUSTON REFINING LP.,"Goble, Taisha","Engskov,Paul Kristian,Jr.",GLORIA GARCIA ORME,5/18/2016 0:51:07,2016-06-19 0:00:00
+110,110,workplace preparation,"SHELL PIPELINE CO., L.P.","Goeth, Amon","Erichsen,Peter C.",SCOTT SCHOLZEN,5/18/2016 0:54:09,2016-06-19 1:00:00
+111,111,voltage relief,"MAGELLAN AMMONIA PIPELINE, L.P.","Gold, Shenice  ","Evans,Madalene E. W.",MARK SMITH,5/18/2016 0:57:21,2016-06-19 2:00:00
+112,112,putting up security posters,ONEOK NGL PIPELINE LP,"Gonzalez, Cayo","Evans,Wanda M.",C PETRUZZELLA,5/18/2016 1:12:10,2016-06-19 3:00:00
+113,113,checking for no voltage,"BUCKEYE PARTNERS, LP","Gonzalez, Juan","Fahle,Karen C.",JOHN HALEY JR,5/18/2016 1:13:28,2016-06-19 4:00:00
+114,114,installing ground connections,"TE PRODUCTS PIPELINE COMPANY, LLC","Gonzalez, Maria","Falk,Deborah Lyn",NELA PONFERRADA,5/18/2016 1:13:43,2016-06-19 5:00:00
+115,115,workplace preparation,EXXONMOBIL OIL CORP - WEST COAST,"Good, Susan","Feinberg,Sheelah A.",CHARLES SCOTT,5/18/2016 1:17:35,2016-06-19 6:00:00
+116,116,voltage relief,CALNEV PIPELINE CO,"Gordon, David","Finch,James",LISETTE ADAMS,5/18/2016 1:18:39,2016-06-19 7:00:00
+117,117,putting up security posters,TESORO - HIGH PLAINS PIPELINE COMPANY,"Gosciminski, Phylicia  ","Finney,Karen Elizabeth",JACKSON WONG,5/18/2016 1:20:07,2016-06-19 8:00:00
+118,118,workplace preparation,"TEPPCO CRUDE PIPELINE, LLC","Goyal, Roxana","Fisher,Everlene H.",IRENE SUNG,5/18/2016 1:20:46,2016-06-19 9:00:00
+119,119,voltage relief,KINDER MORGAN CO2 CO. LP,"Gray, Elijiah  ","Foley,Martha",KHAIRUL ALI,5/18/2016 1:21:32,2016-06-19 10:00:00
+120,120,putting up security posters,"PLAINS PIPELINE, L.P.","Gross, Paula","Footlik,Jay K.",LESLIE DUBBIN,5/18/2016 1:21:57,2016-06-19 11:00:00
+121,121,checking for no voltage,"SHELL PIPELINE CO., L.P.","Gruber, Hans","Forbes,Jeffrey A.",MICHAEL CASTAGNOLA,5/18/2016 1:24:26,2016-06-19 12:00:00
+122,122,installing ground connections,CONOCOPHILLIPS,"Guilianno, Mike","Forgue,Tom",SHELLEY MITCHELL,5/18/2016 1:24:33,2016-06-19 13:00:00
+123,123,workplace preparation,"TEPPCO CRUDE PIPELINE, LLC","Handschiegl, Joanne","Fowler,Donald L.,Jr.",SEAN BONETTI,5/18/2016 1:33:14,2016-06-19 14:00:00
+124,124,voltage relief,"TEPPCO CRUDE PIPELINE, LLC","Hankard, Earnest","Fowler,Carmen B.",SUSAN ILNICKI,5/18/2016 1:35:21,2016-06-19 15:00:00
+125,125,putting up security posters,SUNOCO PIPELINE L.P.,"Harrington, Christie ","Freedman,Thomas L.",TYRONNE JULIAN,5/18/2016 1:35:25,2016-06-19 16:00:00
+126,126,checking for no voltage,COLONIAL PIPELINE CO,"Harrison, Kara","Freeland,Ben A.",SHARON FERRIGNO,5/18/2016 1:42:06,2016-06-19 17:00:00
+127,127,installing ground connections,CHEVRON PIPE LINE CO,"Heitzman, Anthony","Freeman,Myra B.",SHANNON SAKOWSKI,5/18/2016 1:49:54,2016-06-19 18:00:00
+128,128,workplace preparation,"BUCKEYE PARTNERS, LP","Hendrickson, Trina","Friendly,Andrew",JOHN HICKEY,5/18/2016 1:52:46,2016-06-19 19:00:00
+129,129,voltage relief,SEMGROUP LP,"Hitchcock, Alfred","Gaines,Jeremy M.",GLEN KOJIMOTO,5/18/2016 1:54:43,2016-06-19 20:00:00
+130,130,putting up security posters,MARATHON PIPE LINE LLC,"Homberger, Adrienne  J","Garner,Barbara J.",EDWARD CHU,5/18/2016 1:55:09,2016-06-19 21:00:00
+131,131,workplace preparation,TC OIL PIPELINE OPERATIONS INC,"Horton, Jayne","Gerwitz,Dianna Marie",SOFIA MATHEWS,5/18/2016 1:55:46,2016-06-19 22:00:00
+132,132,voltage relief,"PLAINS PIPELINE, L.P.","Houlihan, Debra","Gibson,Jessica Law",EDMUND DEA,5/18/2016 1:55:52,2016-06-19 23:00:00
+133,133,putting up security posters,"MAGELLAN TERMINALS HOLDINGS, LP","Howard, Estelle","Gillespie,Christopher J.",JOHN RAHAIM,5/18/2016 1:56:41,2016-06-20 0:00:00
+134,134,checking for no voltage,ALYESKA PIPELINE SERVICE CO,"Hudson, Jane","Goldoerg,Adam William",WILLIAM ROUALDES,5/18/2016 1:58:47,2016-06-20 1:00:00
+135,135,installing ground connections,"ROCKY MOUNTAIN PIPELINE SYSTEM, LLC","Hunts, Julissa","Goldberg,Donald F.",ZACHARY PUMPHREY,5/18/2016 2:06:32,2016-06-20 2:00:00
+136,136,workplace preparation,"PETROLOGISTICS OLEFINS, LLC","Hutter, Rosalie","Goldberg,Jason Seth",MARK CASTAGNOLA,5/18/2016 2:12:29,2016-06-20 3:00:00
+137,137,voltage relief,CONOCOPHILLIPS,"Huynh, Ming","Goldenbaum,Andrew",NIKOLAS LEMOS,5/18/2016 2:13:08,2016-06-20 4:00:00
+138,138,putting up security posters,SUNOCO PIPELINE L.P.,"Immediato, Walter","Gonzales,Ricardo M.",MICHAEL CARLIN,5/18/2016 2:16:27,2016-06-20 5:00:00
+139,139,checking for no voltage,JAYHAWK PIPELINE LLC,"Ivey, Rose ","Good,Terry W.",JESSE SMITH,5/18/2016 2:24:07,2016-06-20 6:00:00
+140,140,installing ground connections,COLONIAL PIPELINE CO,"Jackson, Maryellen","Goodin,D. Stephen",THERESE STEWART,5/18/2016 2:27:11,2016-06-20 7:00:00
+141,141,workplace preparation,AMOCO OIL CO,"Jacobi, Hannah  ","Goodwin,Donald Ray",MARISA MORET,5/18/2016 2:28:29,2016-06-20 8:00:00
+142,142,voltage relief,HOUSTON REFINING LP.,"Jeannite, Tayana","Goosby,Eric",LUIS IBARRA-RIVERA,5/18/2016 2:28:37,2016-06-20 9:00:00
+143,143,putting up security posters,"PLAINS PIPELINE, L.P.","Jhaveri, Sneha  ","Gordon,Janet V.",GERALD DARCY,5/18/2016 2:35:32,2016-06-20 10:00:00
+144,144,workplace preparation,COLONIAL PIPELINE CO,"Johnson, George","Graham,Laura A.",DONNIE HORNBUCKLE,5/18/2016 2:38:51,2016-06-20 11:00:00
+145,145,voltage relief,CHEVRON PIPE LINE CO,"Johnson, Noelle ","Graham,Lottie B.",SANDRA TONG,5/18/2016 2:40:05,2016-06-20 12:00:00
+146,146,putting up security posters,ENTERPRISE PRODUCTS OPERATING LLC,"Johnston, Yen","Granger,Theresa Faye",ANTHONY DUMONT,5/18/2016 2:42:02,2016-06-20 13:00:00
+147,147,checking for no voltage,CONOCOPHILLIPS,"Jung, Judy  ","Grant,Michael",THERESA DENTONI,5/18/2016 2:51:15,2016-06-20 14:00:00
+148,148,installing ground connections,ONEOK NGL PIPELINE LP,"Kampew, Donysha","Green,Erin E.",TIM AREJA,5/18/2016 2:53:44,2016-06-20 15:00:00
+149,149,workplace preparation,"KOCH PIPELINE COMPANY, L.P.","Keatts, Kramer ","Green,Jeffrey",SIU-KWAN CHOW,5/18/2016 2:58:31,2016-06-20 16:00:00
+150,150,voltage relief,CITGO PRODUCTS PIPELINE CO,"Khemmich, Bartholemew","Green,Julia R.",PATRICIA CARR,5/18/2016 3:04:00,2016-06-20 17:00:00
+151,151,putting up security posters,ENBRIDGE PIPELINES (NORTH DAKOTA) LLC,"King, Janet","Greenstein,Carrie E.",RASMI CHAN,5/18/2016 3:06:09,2016-06-20 18:00:00
+152,152,checking for no voltage,MARATHON PIPE LINE LLC,"Kinsella, Kathleen  ","Hankins,Marjorie S.",MICHAEL KEARNEY,5/18/2016 3:06:44,2016-06-20 19:00:00
+153,153,installing ground connections,"SHELL PIPELINE CO., L.P.","Kirill, Alexandra  ","Hanlin,Kirk T.",MATTHEW MCNAUGHTON,5/18/2016 3:26:59,2016-06-20 20:00:00
+154,154,workplace preparation,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Knapp, Bradley  J","Hazard,Susan L.",JOHN CAVANAUGH,5/18/2016 3:28:33,2016-06-20 21:00:00
+155,155,voltage relief,CONOCOPHILLIPS,"Kretschmer, John","Hendrix,Eunice C.",WHITNEY YEE,5/18/2016 3:28:56,2016-06-20 22:00:00
+156,156,putting up security posters,COLONIAL PIPELINE CO,"Kreuger, Freddy","Henning,Madge Huber",STEVEN MANNINA,5/18/2016 3:36:07,2016-06-20 23:00:00
+157,157,workplace preparation,SUNOCO PIPELINE L.P.,"Lajiri,  Jyoti","Hernandez,David",EDGAR CALLEJAS,5/18/2016 3:43:25,2016-06-21 0:00:00
+158,158,voltage relief,SUNOCO PIPELINE L.P.,"Landa, Hans","Hernreich,Nancy V.",L MILITELLO,5/18/2016 3:46:31,2016-06-21 1:00:00
+159,159,putting up security posters,BELLE FOURCHE PIPELINE CO,"Langford, Lindsey","Higgins,Kathryn O'Leary",MICHAEL BIEL,5/18/2016 3:47:09,2016-06-21 2:00:00
+160,160,checking for no voltage,MOBIL CORP,"Langton, Enrico","Hilley,John L.",DEBRA JOHNSON,5/18/2016 3:49:14,2016-06-21 3:00:00
+161,161,installing ground connections,CHEVRON PIPE LINE CO,"LaRotonda, William  ","Hoover,Jay W.",HAROLD BYRD,5/18/2016 3:51:31,2016-06-21 4:00:00
+162,162,workplace preparation,CONOCOPHILLIPS,"Latif, Mohammed","Horn,Stephen K.",KARL JURGENSON,5/18/2016 4:02:09,2016-06-21 5:00:00
+163,163,voltage relief,"TEPPCO CRUDE PIPELINE, LLC","Le, Binh","Hothem,Eric P.",JULIE LABONTE,5/18/2016 4:05:46,2016-06-21 6:00:00
+164,164,putting up security posters,SUNCOR ENERGY (USA) PIPELINE CO.,"Leach, Dallas","Houser,Everett D.",JOHN BRAGAGNOLO,5/18/2016 4:16:01,2016-06-21 7:00:00
+165,165,checking for no voltage,NUSTAR PIPELINE OPERATING PARTNERSHIP L.P.,"LeBlanc, Brandon  R","Houser,Robert C.",OSCAR CABRERA,5/18/2016 4:23:37,2016-06-21 8:00:00
+166,166,installing ground connections,SUNOCO PIPELINE L.P.,"Lecter, Hannibal","Howell,Willie C.",MARTIEN VERHAEG,5/18/2016 4:34:17,2016-06-21 9:00:00
+167,167,workplace preparation,TC OIL PIPELINE OPERATIONS INC,"Leruth, Giovanni","Hubbard,Katherine",THOMAS ALDANA,5/18/2016 4:37:40,2016-06-21 10:00:00
+168,168,voltage relief,"SHELL PIPELINE CO., L.P.","Liebig, Ketsia","Huber,Carolyn",CARL JEPSEN,5/18/2016 4:37:52,2016-06-21 11:00:00
+169,169,putting up security posters,MARATHON PIPE LINE LLC,"Linares, Marilyn ","Hudson,Maureen Anne",AMPARO RODRIGUEZ,5/18/2016 4:48:24,2016-06-21 12:00:00
+170,170,workplace preparation,WEST TEXAS GULF PIPELINE CO,"Linden, Mathew","Hughes,Edward F.",WILLIAM SCOTT,5/18/2016 4:57:53,2016-06-21 13:00:00
+171,171,voltage relief,EXPLORER PIPELINE CO,"Lindsay, Leonara ","Humphrey,Mary E.",GEORGE LYSENKO,5/18/2016 4:59:02,2016-06-21 14:00:00
+172,172,putting up security posters,"MAGELLAN PIPELINE COMPANY, LP","Lundy, Susan","Hunker,Mark E.",MICHAEL BROWNE,5/18/2016 5:00:58,2016-06-21 15:00:00
+173,173,checking for no voltage,"MAGELLAN AMMONIA PIPELINE, L.P.","Lunquist, Lisa","Huynh,Phu D.",HARRY PINKARD,5/18/2016 5:06:51,2016-06-21 16:00:00
+174,174,installing ground connections,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Lydon, Allison","Ibarra,Mickey",ALBERTO PEDRUCO,5/18/2016 5:11:10,2016-06-21 17:00:00
+175,175,workplace preparation,MARATHON PIPE LINE LLC,"Lynch, Lindsay","Ickes,Harold",LAWRENCE LEE,5/18/2016 5:11:50,2016-06-21 18:00:00
+176,176,voltage relief,SUNOCO PIPELINE L.P.,"MacLennan, Samuel","Ikemiyashiro,Diane",DWAYNE CURRY,5/18/2016 5:15:37,2016-06-21 19:00:00
+177,177,putting up security posters,DIXIE PIPELINE,"Mahoney, Lauren  ","Imbroscio,Michael X.",RENEE MARQUARDT,5/18/2016 5:28:33,2016-06-21 20:00:00
+178,178,checking for no voltage,OXY USA INC,"Manchester, Robyn","Jackson,Ronda H.",HARVEY ELWIN,5/18/2016 5:29:14,2016-06-21 21:00:00
+179,179,installing ground connections,"WHITE CLIFFS PIPELINE, LLC","Mancuso, Karen","Jacoby,Peter G.",LEON WHITE,5/18/2016 5:41:19,2016-06-21 22:00:00
+180,180,workplace preparation,EXXONMOBIL PIPELINE CO,"Mangal, Debbie","James,Theodoric C.,Jr.",DENNIS HERRERA,5/18/2016 5:42:39,2016-06-21 23:00:00
+181,181,voltage relief,ENTERPRISE PRODUCTS OPERATING LLC,"Martin, Sandra","Janenda,Thomas D.",DONALD BRYANT,5/18/2016 5:45:48,2016-06-22 0:00:00
+182,182,putting up security posters,SUNOCO PIPELINE L.P.,"Maurice, Shana","Jarrell,Sylvia M.",NATHAN HARDY,5/18/2016 5:47:41,2016-06-22 1:00:00
+183,183,workplace preparation,EXXONMOBIL PIPELINE CO,"Carthy, B'rigit","Jasso Rotunno,Cynthia",SUSAN BUCHBINDER,5/18/2016 5:49:21,2016-06-22 2:00:00
+184,184,voltage relief,PLANTATION PIPE LINE CO,"Mckenna, Sandy","Jennings,Christopher C.",KIRSTEN BARASH,5/18/2016 5:49:42,2016-06-22 3:00:00
+185,185,putting up security posters,ONEOK NGL PIPELINE LP,"McKinzie, Jac","Johnson,Leanne I.",DENNIS SUTTER,5/18/2016 5:50:59,2016-06-22 4:00:00
+186,186,checking for no voltage,"KOCH PIPELINE COMPANY, L.P.","Meads, Elizabeth","Johnson,Lee Richard",JOHN BROWN,5/18/2016 5:52:27,2016-06-22 5:00:00
+187,187,installing ground connections,MARATHON PIPE LINE LLC,"Medeiros, Jennifer","Johnson,Robert Benjamin",KATHRYN BALLOU,5/18/2016 6:03:51,2016-06-22 6:00:00
+188,188,workplace preparation,ONEOK NGL PIPELINE LP,"Miller, Brannon","Johnson,Rochester M.",DONALD FIELDS,5/18/2016 6:21:19,2016-06-22 7:00:00
+189,189,voltage relief,ONEOK NGL PIPELINE LP,"Miller, Ned","Jones,Anna L.",LUIS HERRERA,5/18/2016 6:23:18,2016-06-22 8:00:00
+190,190,putting up security posters,MARATHON PIPE LINE LLC,"Monkfish, Erasumus","Jones,Crystal B.",GEORGE FOURAS,5/18/2016 6:38:46,2016-06-22 9:00:00
+191,191,checking for no voltage,"KINDER MORGAN LIQUID TERMINALS, LLC","Monroe, Peter","Jones,Cyril",MARTIN LALOR JR,5/18/2016 6:40:35,2016-06-22 10:00:00
+192,192,installing ground connections,"SFPP, LP","Monterro, Luisa","Jones,Deborah A.",GRAD GREEN,5/18/2016 6:41:08,2016-06-22 11:00:00
+193,193,workplace preparation,ONEOK NGL PIPELINE LP,"Moran, Patrick","Jordan,Jennifer Ann",DARCY KELLER,5/18/2016 6:53:02,2016-06-22 12:00:00
+194,194,voltage relief,"MAGELLAN AMMONIA PIPELINE, L.P.","Morway, Tanya","Kagan,Elena",SAMUEL ROMERO,5/18/2016 6:55:07,2016-06-22 13:00:00
+195,195,putting up security posters,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Motlagh,  Dawn","Kalbaugh,David E.",ALEXANDER CHEN,5/18/2016 7:02:48,2016-06-22 14:00:00
+196,196,workplace preparation,CITGO PIPELINE CO,"Moumanil, Maliki ","Kaplan,Jody J.",OLLIE BANKS,5/18/2016 7:04:09,2016-06-22 15:00:00
+197,197,voltage relief,EXPLORER PIPELINE CO,"Myers, Michael","Kearney,Janis F.",BURK DELVENTHAL,5/18/2016 7:10:02,2016-06-22 16:00:00
+198,198,putting up security posters,"ENBRIDGE ENERGY, LIMITED PARTNERSHIP","Navathe, Kurt","King,Angus S.,III",THOMAS HARVEY,5/18/2016 7:12:21,2016-06-22 17:00:00
+199,199,checking for no voltage,CENEX PIPELINE LLC,"Ndzi, Colombui","King,Joshua A.",MARTIN BELTRAN,5/18/2016 7:13:43,2016-06-22 18:00:00
