@@ -1,0 +1,55 @@
+--What data will be visible if the employee clicks on create a clearance order?
+SELECT Create_E_Naryad_Table_1
+  Create_E_Naryad_Table_1.Organization,
+  Create_E_Naryad_Table_1.Plot,
+  Create_E_Naryad_Table_1.Admitting,
+  Create_E_Naryad_Table_1.Team_Members,
+  Create_E_Naryad_Table_1.Category_Of_Work,
+  Create_E_Naryad_Table_1.Employee_Prepardness_Time,
+  Create_E_Naryad_Table_1.An_Object,
+  Create_E_Naryad_Table_1.Finish_Work_Date,
+  Create_E_Naryad_Table_1.Subdivision,
+  Create_E_Naryad_Table_1.Work_Manager,
+  Create_E_Naryad_Table_1.Observer,
+  Create_E_Naryad_Table_1.Open_Single_Line_Diagram,
+  Create_E_Naryad_Table_1.Is_Entrusted,
+  Create_E_Naryad_Table_1.Start_Work DATETIME,
+  Create_E_Naryad_Table_1.Names_Electrical_Installations,
+  Create_E_Naryad_Table_1.Separate_Instructions,
+  Create_E_Naryad_Table_1.Signature,
+  Create_E_Naryad_Table_1.Be_Disconnected,
+  Create_E_Naryad_Table_1.Outfit_Issued,
+  Create_E_Naryad_Table_1.Surname,
+  Create_E_Naryad_Table_2.Names_Electrical_Installations,
+  Create_E_Naryad_Table_2.Table_Two_id,
+  Create_E_Naryad_Table_2.Person_Issued_Outfit,
+  Create_E_Naryad_Table_2.Signature_Outfit,
+  Create_E_Naryad_Table_2.Responsible_Work_Manager,
+  Create_E_Naryad_Table_2.Signature_W_Manager,
+  Create_E_Naryad_Table_3.Outfit_gave,
+  Create_E_Naryad_Table_3.Signature,
+  Create_E_Naryad_Table_3.Date_time,
+  Create_E_Naryad_Table_3.Workplaces_Prepared,
+  Create_E_Naryad_Table_3.Surname,
+  Create_E_Naryad_Table_3.Agreed,
+  Create_E_Naryad_Table_3.Admitting,
+  Create_E_Naryad_Table_3.Responsible_Performance_Manager,
+  Create_E_Naryad_Table_4.Number,
+  Create_E_Naryad_Table_4.Admitting,
+  Create_E_Naryad_Table_4.Hazards_Risks_Ident,
+  Create_E_Naryad_Table_4.Date,
+  Create_E_Naryad_Table_4.Company,
+  Create_E_Naryad_Table_4.Job_Tasks,
+  Create_E_Naryad_Table_4.Members_Group,
+  Create_E_Naryad_Table_4.Stages_of_Work,
+  Create_E_Naryad_Table_4.Possible_Potential_Accidents,
+  Create_E_Naryad_Table_4.Control_Measures,
+  Create_E_Naryad_Table_4.Responsible_Performance_Manager,
+  Create_E_Naryad_Table_4.Are_There_Control_Measures
+FROM Create_E_Naryad_Table_1
+INNER JOIN Create_E_Naryad_Table_2
+ON Create_E_Naryad_Table_1.Employee_id = Create_E_Naryad_Table_2.Employee_id
+INNER JOIN Create_E_Naryad_Table_3
+ON Create_E_Naryad_Table_1.Employee_id = Create_E_Naryad_Table_3.Employee_id
+INNER JOIN Create_E_Naryad_Table_4
+ON Create_E_Naryad_Table_1.Employee_id = Create_E_Naryad_Table_4.Employee_id;
