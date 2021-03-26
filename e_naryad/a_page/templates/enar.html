@@ -2,5 +2,103 @@
 {% block content %}
 
 <br>
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content-header">
+    <div class="row">
+    <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+            <div class="inner">
+                <h3>1254</h3>
+                <p>Создано <br>наряд-допусков</br></p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-clipboard"></i>
+            </div>
+            <a href="" class="small-box-footer">Создать наряд допуск <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-success">
+            <div class="inner">
+                <h3>112</h3>
+                <p>Закрытые <br>паспорта эксплуатации</br></p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="" class="small-box-footer">Посмотреть списком <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>74</h3>
+                <p>Открытые <br>паспорта эксплуатации</br></p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="" class="small-box-footer">Посмотреть списком <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        </div>
+         <div class="card">
+            <div class="card-header">
+                    <h3 class="card-title">Список наряд-допусков</h3>
+                <div class="card-tools">
+                    <ul class="pagination pagination-sm float-right">
+                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+                <table class="table">
+                <thead>
+                    <tr>
+                    <th style="width: 50px">#</th>
+                    <th>Номер наряд-допуска</th>
+                    <th>Паспорт эксплуатации</th>
+                    <th>Дата</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>1.</td>
+                    <td>Наряд-допуск №1234</td>
+                    <td><span class="badge bg-danger">Необходимо заполнить паспорт эксплуатации</span></td>
+                    <td>06/08/2020</td>
+                    </tr>
+                    <tr>
+                    <td>2.</td>
+                    <td>Наряд-допуск №5678</td>
+                    <td><span class="badge bg-success">Паспорт эксплуатации заполнен</span></td>
+                    <td>19/12/2020</td>
+                    </tr>
+                    <tr>
+                    <td>3.</td>
+                    <td>Наряд-допуск №741</td>
+                    <td><span class="badge bg-danger">Необходимо заполнить паспорт эксплуатации</span></td>
+                    <td>25/07/2021</td>
+                    </tr>
+                    <tr>
+                    <td>4.</td>
+                    <td>Наряд-допуск №369</td>
+                    <td><span class="badge bg-success">Паспорт эксплуатации заполнен</span></td>
+                    <td>26/12/2021</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div> <!-- /.content-header -->
+</div> <!-- /.content-wraper -->
+
 
 {% endblock %}
