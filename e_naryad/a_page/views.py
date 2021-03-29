@@ -18,3 +18,5 @@ def close_nar_page1(request):
 
 def order_index(request):
     return render(request, 'order_index.html') 
+
+
