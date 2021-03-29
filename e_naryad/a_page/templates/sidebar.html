@@ -1,5 +1,6 @@
 {% load static %}
 
+<div class="wrapper">
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light mb-5">
   <!-- Left navbar links -->
@@ -8,7 +9,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="ссылка основной страницы" class="nav-link">Home</a>
+      
     </li>
    
   </ul>
@@ -55,7 +56,7 @@
             </li>
             
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'order_i' %}" class="nav-link">
               <i class="nav-icon fas fa-door-open"></i>
               <p>
                 Распоряжение             
@@ -134,6 +135,6 @@
   <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+
 <!-- ./wrapper -->
 
