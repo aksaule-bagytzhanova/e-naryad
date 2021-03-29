@@ -1,51 +1,75 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
-<div class="card card-info">
-    <div class="card-header">
-    <h3 class="card-title"><b>Список данных</b></h3>
-    </div>
-    <section class="content">
-    <div class="container-fluid">
-      <div class="card-body">
-        <div class="uper">
-            <div class="alert alert-success">
-            </div><br />
-
-          <div class="card-body table-responsive p-0">
-          <table class="table table-hover text-nowrap">
-            <thead>
-                <tr>
-                  <td>Номер распоряжения</td>
-                  <td>Технические мероприятия</td>
-                  <td>Место и наименование работ</td>
-                  <td>Производитель работ или наблюдающий (фамилия, инициалы, группа)</td>
-                  <td>Члены бригады, работающей по распоряжению (Ф.И.О., группа)</td>
-                  <td>Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа)</td>
-                  <td>К работе приступили (дата, время)</td>
-                  <td>Работа закончена (дата, время)</td>
-                  <td>Действия</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td><a href="#" class="btn btn-primary">Правка</a></td>
-                </tr>
-            </tbody>
-          </table>
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Журнал распоряжении</h1>
           </div>
-          <td><a href="#" class="btn btn-secondary">Добавить</a></td>
         </div>
-      </div>
-    </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+          <div class="card card-info">
+              <div class="card-header">
+              <h3 class="card-title"><b>Список данных</b></h3>
+              </div>
+              <section class="content">
+              <div class="container-fluid">
+                <div class="card-body">
+                  <div class="uper">
+                    <br/>
+          
+                    <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-nowrap">
+                      <thead>
+                          <tr>
+                            <td>Номер распоряжения</td>
+                            <td>Технические мероприятия</td>
+                            <td>Место и наименование работ</td>
+                            <td>Производитель работ или наблюдающий (фамилия, инициалы, группа)</td>
+                            <td>Члены бригады, работающей по распоряжению (Ф.И.О., группа)</td>
+                            <td>Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа)</td>
+                            <td>К работе приступили (дата, время)</td>
+                            <td>Работа закончена (дата, время)</td>
+                            <td>Действия</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>55</td>
+                              <td>55</td>
+                              <td>55</td>
+                              <td>55</td>
+                              <td>55</td>
+                              <td>55</td>
+                              <td>55</td>
+                              <td>55</td>
+                              <td><a href="#" class="btn btn-primary">Правка</a></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                    <td><a href="#" class="btn btn-secondary">Добавить</a></td>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
   </div>
+  <!-- /.content-wrapper -->
+</div>
+
 
   {% endblock %}
