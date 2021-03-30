@@ -157,4 +157,32 @@ CREATE TABLE IF NOT EXISTS Disposal_Journal(
        REFERENCES  Employee(Employee_id) 
 );
 
+DROP TABLE IF EXISTS Employee_add_gate;
+CREATE TABLE IF NOT EXISTS Employee_add_gate(
+  Employee_id INTEGER NOT NULL ,
+	start_time VARCHAR DATETIME   DEFAULT CURRENT_TIME   ,
+	end_time VARCHAR DATETIME   DEFAULT NULL ,
+	date VARCHAR DATETIME   DEFAULT CURRENT_DATE   ,
+  FOREIGN KEY (Employee_id)
+       REFERENCES  Employee(Employee_id)
+);
+
+DROP TABLE IF EXISTS Employee_add_holiday;
+CREATE TABLE IF NOT EXISTS Employee_add_holiday(
+  Employee_id INTEGER NOT NULL ,
+	start_date VARCHAR DATETIME NOT NULL   ,
+	end_date VARCHAR DATETIME  NOT NULL  ,
+  FOREIGN KEY (Employee_id)
+       REFERENCES  Employee(Employee_id)
+);
+
+DROP TABLE IF EXISTS Employee_sick_leave;
+CREATE TABLE IF NOT EXISTS Employee_sick_leave(
+  Employee_id INTEGER NOT NULL ,
+	start_date VARCHAR DATETIME NOT NULL   ,
+	end_date VARCHAR DATETIME  NOT NULL  ,
+  FOREIGN KEY (Employee_id)
+       REFERENCES  Employee(Employee_id)
+);
+
 
