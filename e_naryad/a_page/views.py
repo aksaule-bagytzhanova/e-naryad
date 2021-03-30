@@ -17,6 +17,12 @@ def close_nar_page1(request):
     return render(request, 'close_nar_page1.html')
 
 def order_index(request):
-    return render(request, 'order_index.html') 
+    return render(request, 'order/order_index.html') 
+
+def order_edit(request):
+    return render(request, 'order/order_edit.html')
+
+def order_add(request):
+    return render(request, 'order/order_add.html')
 
 
