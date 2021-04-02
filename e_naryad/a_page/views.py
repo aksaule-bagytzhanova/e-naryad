@@ -25,4 +25,8 @@ def order_edit(request):
 def order_add(request):
     return render(request, 'order/order_add.html')
 
+def passport_i(request):
+    return render(request, 'passport/passport_index.html')
 
+def passport_cabel(request):
+    return render(request, 'passport/passport_cabel.html')
