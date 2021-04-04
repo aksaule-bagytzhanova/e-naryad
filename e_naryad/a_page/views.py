@@ -66,3 +66,19 @@ def passport_substation(request):
 
 def passport_uts(request):
     return render(request, 'passport/passport_uts.html')
+
+def contact(request):
+    return render(request, 'attendance/contact.html')
+
+def calendar(request):
+    return render(request, 'attendance/calendar.html')
+
+def gate(request):
+    return render(request, 'attendance/gate.html')
+
+def add_sick(request):
+    return render(request, 'attendance/add_sick.html')
+
+def profile(request):
+    return render(request, 'profile.html')
+

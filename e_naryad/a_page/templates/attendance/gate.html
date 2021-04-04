@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Записи о входе</h1>
+          </div>
+          <!-- /.col -->
+          
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->` 
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Временные информации</h3>
+        </div>
+        <div class="card-body">
+          <a href="#" ><button type="button" class="btn btn-block btn-outline-primary">Общее время на работе</button></a>
+          <a href="{% url 'add_sick' %}" ><button type="button" class="btn  btn-block btn-outline-secondary">Добавить больничное время</button></a>
+          <a href="#" ><button type="button" class="btn  btn-block btn-outline-success">Добавить отпускное время</button></a>
+        </div>
+      </div>
+        </section>
+  </div>
+</div>
+
+{% endblock %}

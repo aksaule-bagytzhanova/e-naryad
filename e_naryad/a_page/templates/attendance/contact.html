@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Связаться со службой технической поддержки</h1>
+          </div>
+          </div>
+      </div><!-- /.container-fluid -->
+    </section>
+  
+    <!-- Main content -->
+    <section class="content">
+  
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-body row">
+          <div class="col-5 text-center d-flex align-items-center justify-content-center">
+            <div class="">
+              <h2>Admin<br><strong class="text-success">Happy<br>Life<br>Insurance</strong></h2>
+              
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="form-group">
+              <label for="inputName">ФИО работника</label>
+              <input type="text" id="inputName" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="inputSubject">Тема</label>
+              <input type="text" id="inputSubject" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="inputMessage">Сообщение</label>
+              <textarea id="inputMessage" class="form-control" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="Отправить">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+    <!-- /.content -->
+  </div>
+
+  {% endblock %}

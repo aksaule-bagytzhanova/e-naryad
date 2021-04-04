@@ -25,7 +25,11 @@ urlpatterns = [
     path('passport/pg', views.passport_pg, name = 'passport_pg'), 
     path('passport/substation', views.passport_substation, name = 'passport_substation'), 
     path('passport/uts', views.passport_uts, name = 'passport_uts'), 
-    
+    path('contact_us/', views.contact, name='contact'),
+    path('calendar/', views.calendar, name ='calendar'),
+    path('gate/', views.gate, name='gate'),
+    path('gate/add_sick_days', views.add_sick, name='add_sick'),
+    path('profile', views.profile, name='profile')
     
     
     

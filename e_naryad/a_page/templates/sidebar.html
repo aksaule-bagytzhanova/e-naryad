@@ -32,7 +32,7 @@
             <!-- /.box-body -->
           </div>
         <div class="info">
-          <a href="#" class="d-block">Kim Jun-myeon</a>
+          <a href="{% url 'profile' %}" class="d-block">Kim Jun-myeon</a>
         </div>
       </div>
      
@@ -50,14 +50,14 @@
             <a href="{% url 'enar' %}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Е-наряд
              </p>
             </a>
             </li>
             
           <li class="nav-item">
             <a href="{% url 'order_i' %}" class="nav-link">
-              <i class="nav-icon fas fa-door-open"></i>
+              <i class="nav-icon fas fa-address-book"></i>
               <p>
                 Распоряжение             
               </p>
@@ -72,7 +72,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fas fa-calculator"></i>
               <p>
                 Расчет эффективности
                
@@ -88,37 +88,37 @@
             </a>
           </li>
        
-          <li class="nav-header">Attendance</li>
+          <li class="nav-header">Посещаемость</li>
            <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'gate' %}" class="nav-link">
               <i class="nav-icon fas fa-door-open"></i>
               <p>
-                Gate Entry Records
+                Записи о входе
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-business-time"></i>
               <p>
-                Flexi time
+                Гибкое время
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'calendar' %}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
-                Calendar
+                Календарь
                
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'contact' %}" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
-                Settings
+                Связаться с нами
               </p>
             </a>
           </li>

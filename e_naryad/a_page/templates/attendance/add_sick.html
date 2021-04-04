@@ -1,0 +1,69 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Sick days</h1>
+          </div>
+          <!-- /.col -->
+          
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+    <div class="card card-secondary">
+      <div class="card-header">
+        <h3 class="card-title">Add sick days</h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+      <form>
+        <div class="card-body">
+          <div class="form-group">
+            <label >Eployee Id</label>
+            <input type="Employee_id" class="form-control" id="Employee_id" placeholder="Enter Eployee Id">
+          </div>
+          <div class="form-group">
+            <label >Start Date</label>
+            <input type="date" class="form-control" id="start_date" placeholder="Date">
+          </div>
+          <div class="form-group">
+            <label >End Date</label>
+            <input type="date" class="form-control" id="end_date" placeholder="Date">
+          </div>
+          
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.card -->
+  </div>
+  </section>
+  </div>
+
+    <!-- /.Main content -->
+
+        
+
+
+
+{% endblock %}
