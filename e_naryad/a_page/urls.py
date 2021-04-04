@@ -20,6 +20,11 @@ urlpatterns = [
     path('passport/isg', views.passport_isg, name = 'passport_isg'), 
     path('passport/list', views.passport_list, name = 'passport_list'), 
     path('passport/mcc', views.passport_mcc, name = 'passport_mcc'), 
+    path('passport/motor', views.passport_motor, name = 'passport_motor'), 
+    path('passport/panel', views.passport_panel, name = 'passport_panel'), 
+    path('passport/pg', views.passport_pg, name = 'passport_pg'), 
+    path('passport/substation', views.passport_substation, name = 'passport_substation'), 
+    path('passport/uts', views.passport_uts, name = 'passport_uts'), 
     
     
     

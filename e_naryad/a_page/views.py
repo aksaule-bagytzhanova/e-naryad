@@ -52,3 +52,17 @@ def passport_list(request):
 def passport_mcc(request):
     return render(request, 'passport/passport_mcc.html')
 
+def passport_motor(request):
+    return render(request, 'passport/passport_motor.html')
+
+def passport_panel(request):
+    return render(request, 'passport/passport_panel.html')
+
+def passport_pg(request):
+    return render(request, 'passport/passport_panel.html')
+
+def passport_substation(request):
+    return render(request, 'passport/passport_substation.html')
+
+def passport_uts(request):
+    return render(request, 'passport/passport_uts.html')
