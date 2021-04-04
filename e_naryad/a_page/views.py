@@ -30,3 +30,25 @@ def passport_i(request):
 
 def passport_cabel(request):
     return render(request, 'passport/passport_cabel.html')
+
+def passport_circuit(request):
+    return render(request, 'passport/passport_circuit.html')
+
+def passport_distribution(request):
+    return render(request, 'passport/passport_distribution.html')
+
+def passport_blade(request):
+    return render(request, 'passport/passport_blade.html')
+
+def passport_indoor(request):
+    return render(request, 'passport/passport_indoor.html')
+
+def passport_isg(request):
+    return render(request, 'passport/passport_isg.html')
+
+def passport_list(request):
+    return render(request, 'passport/passport_list.html')
+
+def passport_mcc(request):
+    return render(request, 'passport/passport_mcc.html')
+

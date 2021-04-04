@@ -1,4 +1,5 @@
 from django.urls import path
+from django.urls.conf import include
 from . import views
 
 urlpatterns = [
@@ -11,7 +12,17 @@ urlpatterns = [
     path('order_edit/', views.order_edit, name='order_e'),
     path('order_add/', views.order_add, name='order_a'),
     path('passport/', views.passport_i, name = 'passport_i'),
-    path('passport/cabel', views.passport_cabel, name = 'passport_cabel')
+    path('passport/cabel', views.passport_cabel, name = 'passport_cabel'),
+    path('passport/circuit', views.passport_circuit, name = 'passport_circuit'),
+    path('passport/distribution', views.passport_distribution, name = 'passport_distribution'), 
+    path('passport/blade', views.passport_blade, name = 'passport_blade'), 
+    path('passport/indoor', views.passport_indoor, name = 'passport_indoor'), 
+    path('passport/isg', views.passport_isg, name = 'passport_isg'), 
+    path('passport/list', views.passport_list, name = 'passport_list'), 
+    path('passport/mcc', views.passport_mcc, name = 'passport_mcc'), 
+    
+    
+    
     
     
 ]
