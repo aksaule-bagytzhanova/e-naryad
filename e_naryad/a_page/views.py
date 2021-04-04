@@ -82,3 +82,6 @@ def add_sick(request):
 def profile(request):
     return render(request, 'profile.html')
 
+def flexi_time(request):
+    return render(request, 'attendance/flexi_time.html')
+
