@@ -88,3 +88,9 @@ def flexi_time(request):
 def add_holiday(request):
     return render(request, 'attendance/add_holiday.html')
 
+def plan_index(request):
+    return render(request, 'plan/plan_index.html')
+
+def messages_index(request):
+    return render(request, 'messages/mess_index.html')
+

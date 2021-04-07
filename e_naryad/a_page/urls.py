@@ -32,6 +32,8 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     path('flexi_time', views.flexi_time, name='flexi_time'),
     path('add_holiday', views.add_holiday, name='add_holiday'),
+    path('plan_index', views.plan_index, name='plan_index'),
+    path('mess_index', views.messages_index, name='mess_index'),
     
     
     
