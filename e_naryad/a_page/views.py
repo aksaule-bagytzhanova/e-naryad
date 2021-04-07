@@ -85,3 +85,6 @@ def profile(request):
 def flexi_time(request):
     return render(request, 'attendance/flexi_time.html')
 
+def add_holiday(request):
+    return render(request, 'attendance/add_holiday.html')
+

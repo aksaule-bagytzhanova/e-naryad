@@ -31,6 +31,7 @@ urlpatterns = [
     path('gate/add_sick_days', views.add_sick, name='add_sick'),
     path('profile', views.profile, name='profile'),
     path('flexi_time', views.flexi_time, name='flexi_time'),
+    path('add_holiday', views.add_holiday, name='add_holiday'),
     
     
     
