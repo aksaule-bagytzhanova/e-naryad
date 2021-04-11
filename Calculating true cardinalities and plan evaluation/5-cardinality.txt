@@ -1,0 +1,34 @@
+Select * from Messages 
+INNER join Employee 
+ON Messages.Employee_id=Employee.Employee_id 
+INNER JOIN Employee_add_gate
+ON Employee_add_gate.Employee_id=Employee.Employee_id;
+where Position="Technical support";
+
+select COUNT(*)
+from Messages 
+JOIN(Employee JOIN Employee_add_gate ON Employee_id=Employee_id  and Position="Technical support" )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.0175844444341613764 seconds
+
+
+select COUNT(*)
+from Employee 
+JOIN(Messages JOIN Employee_add_gate ON Employee_id=Employee_id   )
+ON Employee_id=Employee_id and Position="Technical support";
+
+TIME FOR testQuery: 0.0130443543416137695 seconds
+
+select COUNT(*)
+from Employee_add_gate 
+JOIN(Messages JOIN Employee ON Employee_id=Employee_id and Position="Technical support"  )
+ON Employee_id=Employee_id ;
+
+TIME FOR testQuery: 0.0164444434161376478 seconds
+
+(Messages ⋈ Employee) ⋈ Employee_add_gate (25 + 30 = 50 tuples)
+(Employee ⋈ Messages) ⋈ Employee_add_gate (25 + 30 = 50 tuples)
+(Employee_add_gate ⋈ Messages) ⋈ Employee (1450 + 50 = 1500 tuples)
+
+

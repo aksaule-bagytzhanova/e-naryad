@@ -1,0 +1,36 @@
+Select Admitting,Position 
+from Create_E_Naryad_Table_3 
+INNER JOIN Employee
+ON Employee_add_gate.Employee_id=Employee.Employee_id
+INNER JOIN Employee_add_gate
+ON Employee_add_gate.Employee_id=Employee.Employee_id;
+
+
+select COUNT(*)
+from Employee_add_gate 
+JOIN(Employee JOIN Create_E_Naryad_Table_3 ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.02395684814453125 seconds
+
+
+select COUNT(*)
+from Employee 
+JOIN(Employee_add_gate JOIN Create_E_Naryad_Table_3 ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.02225684814453125 seconds
+
+
+select COUNT(*)
+from Create_E_Naryad_Table_3 
+JOIN(Employee JOIN Employee_add_gate ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.0265684814453125 seconds
+
+
+(Employee_add_gate ⋈ Employee) ⋈ Create_E_Naryad_Table_3 (30 + 30 = 60 tuples)
+(Employee ⋈ Employee_add_gate) ⋈ Create_E_Naryad_Table_3 (30 + 30 = 60 tuples)
+(Create_E_Naryad_Table_3 ⋈ Employee) ⋈ Employee_add_gate (1600 + 300 = 1900 tuples)
+
