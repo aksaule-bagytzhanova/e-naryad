@@ -1,0 +1,35 @@
+Select Person_Who_Gave_Outfit, Position 
+from Disposal_Journal 
+INNER JOIN Employee 
+ON Disposal_Journal.Employee_id=Employee.Employee_id
+INNER JOIN Employee_add_gate
+ON Employee_add_gate.Employee_id=Employee.Employee_id;
+
+select COUNT(*)
+from Employee_add_gate 
+JOIN(Employee JOIN Disposal_Journal ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.01879715919494629 seconds
+
+
+select COUNT(*)
+from Employee 
+JOIN(Disposal_Journal JOIN Employee_add_gate ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.02179715919494629 seconds
+
+
+select COUNT(*)
+from Disposal_Journal 
+JOIN(Employee JOIN Employee_add_gate ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.0165715919494629 seconds
+
+
+(Employee_add_gate ⋈ Employee) ⋈ Disposal_Journal (20 + 20 = 40 tuples)
+(Employee ⋈ Disposal_Journal) ⋈ Employee_add_gate (20 + 20 = 40 tuples)
+(Disposal_Journal ⋈ Employee) ⋈ Employee_add_gate (1500 + 20 = 1520 tuples)
+

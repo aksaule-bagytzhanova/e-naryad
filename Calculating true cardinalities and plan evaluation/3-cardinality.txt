@@ -1,0 +1,34 @@
+Select Name, Position, Employee_hours_at_work 
+from Employee 
+INNER JOIN Employee_time 
+ON Employee_time.Employee_id=Employee.Employee_Id
+INNER JOIN Employee_add_holiday
+ON Employee_add_holiday.Employee_id=Employee.Employee_Id;
+
+select COUNT(*)
+from Employee 
+JOIN(Employee_time JOIN Employee_add_holiday ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.020444443416137695 seconds
+
+
+select COUNT(*)
+from Employee_time 
+JOIN(Employee JOIN Employee_add_holiday ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.021543423416137695 seconds
+
+
+select COUNT(*)
+from Employee_add_holiday 
+JOIN(Employee_time JOIN Employee ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id;
+
+TIME FOR testQuery: 0.02006423416137695 seconds
+
+
+(Employee ⋈ Employee_time) ⋈ Employee_add_holiday (40 + 30 = 70 tuples)
+(Employee_time ⋈ Employee) ⋈ Employee_add_holiday (40 + 30 = 70 tuples)
+(Employee_add_holiday ⋈ Employee_time) ⋈ Employee (1250 + 100 = 1350 tuples)

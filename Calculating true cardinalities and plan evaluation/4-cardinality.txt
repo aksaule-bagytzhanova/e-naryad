@@ -1,0 +1,41 @@
+Select Name, Position, Category_Of_work , Technical_Activities 
+from Employee 
+join Create_E_Naryad_Table_1
+on Create_E_Naryad_Table_1.Employee_id=Employee.Employee_id
+join Disposal_Journal
+on Disposal_Journal.Employee_id=Employee.Employee_id
+where Employee_id=1;
+
+select COUNT(*)
+from Employee 
+JOIN(Create_E_Naryad_Table_1 JOIN Disposal_Journal ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id and  Employee_id=1 ;
+
+TIME FOR testQuery: 0.021344443416137693 seconds
+
+select COUNT(*)
+from Create_E_Naryad_Table_1 
+JOIN(Employee JOIN Disposal_Journal ON Employee_id=Employee_id and Employee_id=1   )
+ON Employee_id=Employee_id ;
+
+TIME FOR testQuery: 0.025246238246137695 seconds
+
+
+select COUNT(*)
+from Disposal_Journal 
+JOIN(Employee JOIN Create_E_Naryad_Table_1 ON Employee_id=Employee_id and Employee_id=1   )
+ON Employee_id=Employee_id ;
+
+TIME FOR testQuery: 0.023647544434161374 seconds
+
+(Employee ⋈ Create_E_Naryad_Table_1) ⋈ Disposal_Journal (50 + 30 = 80 tuples)
+(Create_E_Naryad_Table_1 ⋈ Employee) ⋈ Disposal_Journal (50 + 30 = 80 tuples)
+(Disposal_Journal ⋈ Employee) ⋈ Create_E_Naryad_Table_1 (1600 + 250 = 1850 tuples)
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+Select * 
+from Employee_add_holiday 
+LEFT join Employee_time 
+ON Employee_add_holiday.Employee_id=Employee_time.Employee_id 
+LEFT join System_Time_In_Month
+ON System_Time_In_Month.Employee_id=Employee_time.Employee_id 
+where Holiday_Hours>0;
+
+select COUNT(*)
+from Employee_add_holiday 
+JOIN(Employee_time JOIN System_Time_In_Month ON Employee_id=Employee_id and Holiday_Hours>0 )
+ON Employee_id=Employee_id;
+
+
+select COUNT(*)
+from Employee_time 
+JOIN(Employee_add_holiday JOIN System_Time_In_Month ON Employee_id=Employee_id  )
+ON Employee_id=Employee_id and Holiday_Hours>0;
+
+
+select COUNT(*)
+from System_Time_In_Month 
+JOIN(Employee_time JOIN Employee_add_holiday ON Employee_id=Employee_id and Holiday_Hours>0 )
+ON Employee_id=Employee_id;
+
+(Employee_add_holiday ⋈ Employee_time) ⋈ System_Time_In_Month (20 + 20 = 40 tuples)
+(Employee_time ⋈ Employee_add_holiday) ⋈ System_Time_In_Month (20 + 20 = 40 tuples)
+(System_Time_In_Month ⋈ Employee_time) ⋈ Employee_add_holiday (1500 + 20 = 1520 tuples)
+
+
+
+
