@@ -18,43 +18,49 @@ class Employee_Time(models.Model):
     holiday_h = models.BigIntegerField(null=True)
     sick_h = models.BigIntegerField(null=True)
 
-
-class create_e_naryad_table_1(models.Model):
-    ORGANIZATION = (
-        ('КаражанбасМунай', 'КаражанбасМунай'),
-        ('Мангистаумунайгаз', 'Мангистаумунайгаз'),
-        ('Buzachi Operating', 'Buzachi Operating'),
-        ('CASPI BITUM', 'CASPI BITUM'),
-        ('КаракудукМунай', 'КаракудукМунай'),
-        ('TOTAL E & P Dunga', 'TOTAL E & P Dunga'),
-        ('Кен-Сары', 'Кен-Сары'),
-        ('OMV Petrom S.A.', 'OMV Petrom S.A.'),
-        ('КазМунайТениз', 'КазМунайТениз'),
-        ('СП Арман', 'СП Арман'),
-        ('ТОО Мангистауэнергомунай', 'ТОО Мангистауэнергомунай'), 
-    )
-    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
-    organization = models.CharField(max_length=200, null=True, choices=ORGANIZATION)
+class ChangeNames(models.Model):
+    organization = models.CharField(max_length=200, null=True)
     plot = models.CharField(max_length=200, null=True)
     admitting = models.CharField(max_length=200, null=True)
-    team_member = models.CharField(max_length=200, null=True)
+    team_members = models.CharField(max_length=200, null=True)
     category_of_work = models.CharField(max_length=200, null=True)
-    employee_preparedness_time = models.CharField(max_length=200, null=True)
-    an_object = models.CharField(max_length=200, null=True)
-    finish_work_date = models.CharField(max_length=200, null=True)
     subdivision = models.CharField(max_length=200, null=True)
     work_manager = models.CharField(max_length=200, null=True)
-    observer = models.CharField(max_length=200, null=True)
-    open_single_line_diagrem = models.CharField(max_length=200, null=True)
-    is_entrusted = models.CharField(max_length=200, null=True)
-    start_work = models.DateTimeField()
-    names_electrical_installations = models.TextField()
-    separate_instructions = models.TextField()
-    signature = models.CharField(max_length=200, null=True)
-    be_disconnected = models.TextField()
-    outfit_issued = models.CharField(max_length=200, null=True)
-    surname = models.CharField(max_length=200, null=True)
+    manufacturer_work_manager = models.CharField(max_length=200, null=True)
+    to_observer = models.CharField(max_length=200, null=True)
+    entrusted = models.CharField(max_length=200, null=True)
+    briefing_carried = models.CharField(max_length=200, null=True)
+    briefing_carried1 = models.CharField(max_length=200, null=True)
+    an_object = models.CharField(max_length=200, null=True)
+    received_briefing = models.CharField(max_length=200, null=True)
+    received_briefing1 = models.CharField(max_length=200, null=True)
 
+class create_e_naryad_table_1(models.Model):
+    organization = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    plot = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    admitting = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    team_members = models.ManyToManyField(ChangeNames)
+    category_of_work = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    employee_preparedness_time = models.DateField()
+    start_work = models.DateField()
+    finish_work = models.DateField()
+    subdivision = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    work_manager = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    manufacturer_work_manager = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    to_observer = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    entrusted = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    an_object = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    workplace_preparation_text1 = models.TextField()
+    workplace_preparation_text2 = models.TextField()
+    workplace_preparation_text3 = models.TextField()
+    name = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    surname = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+
+
+
+
+    
 
 
 
