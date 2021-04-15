@@ -18,43 +18,58 @@ class Employee_Time(models.Model):
     holiday_h = models.BigIntegerField(null=True)
     sick_h = models.BigIntegerField(null=True)
 
-class ChangeNames(models.Model):
-    organization = models.CharField(max_length=200, null=True)
-    plot = models.CharField(max_length=200, null=True)
-    admitting = models.CharField(max_length=200, null=True)
-    team_members = models.CharField(max_length=200, null=True)
-    category_of_work = models.CharField(max_length=200, null=True)
-    subdivision = models.CharField(max_length=200, null=True)
-    work_manager = models.CharField(max_length=200, null=True)
-    manufacturer_work_manager = models.CharField(max_length=200, null=True)
-    to_observer = models.CharField(max_length=200, null=True)
-    entrusted = models.CharField(max_length=200, null=True)
-    briefing_carried = models.CharField(max_length=200, null=True)
-    briefing_carried1 = models.CharField(max_length=200, null=True)
-    an_object = models.CharField(max_length=200, null=True)
-    received_briefing = models.CharField(max_length=200, null=True)
-    received_briefing1 = models.CharField(max_length=200, null=True)
+class Organization(models.Model):
+    name = models.CharField(max_length=200)
+
+class Plot(models.Model):
+    name = models.CharField(max_length=200)
+
+class Admitting(models.Model):
+    name = models.CharField(max_length=200)
+
+class Team_members(models.Model):
+    name = models.CharField(max_length=200)
+
+class Category_of_work(models.Model):
+    name = models.CharField(max_length=200)
+
+class Subdivision(models.Model):
+    name = models.CharField(max_length=200)
+
+class Work_manager(models.Model):
+    name = models.CharField(max_length=200)
+
+class Manufacturer_work_manager(models.Model):
+    name = models.CharField(max_length=200)
+
+class To_observer(models.Model):
+    name = models.CharField(max_length=200)
+
+class Entrusted(models.Model):
+    name = models.CharField(max_length=200)
+
+class An_object(models.Model):
+    name = models.CharField(max_length=200)
+
 
 class create_e_naryad_table_1(models.Model):
-    organization = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    plot = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    admitting = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    team_members = models.ManyToManyField(ChangeNames)
-    category_of_work = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
+    plot = models.ForeignKey(Plot, null=True, on_delete=models.SET_NULL)
+    admitting = models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)
+    team_members = models.ManyToManyField(Team_members)
+    category_of_work = models.ForeignKey(Category_of_work, null=True, on_delete=models.SET_NULL)
     employee_preparedness_time = models.DateField()
     start_work = models.DateField()
     finish_work = models.DateField()
-    subdivision = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    work_manager = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    manufacturer_work_manager = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    to_observer = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    entrusted = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
-    an_object = models.ForeignKey(ChangeNames, null=True, on_delete=models.SET_NULL)
+    subdivision = models.ForeignKey(Subdivision, null=True, on_delete=models.SET_NULL)
+    work_manager = models.ForeignKey(Work_manager, null=True, on_delete=models.SET_NULL)
+    manufacturer_work_manager = models.ForeignKey(Manufacturer_work_manager, null=True, on_delete=models.SET_NULL)
+    to_observer = models.ForeignKey(To_observer, null=True, on_delete=models.SET_NULL)
+    entrusted = models.ForeignKey(Entrusted, null=True, on_delete=models.SET_NULL)
+    an_object = models.ForeignKey(An_object, null=True, on_delete=models.SET_NULL)
     workplace_preparation_text1 = models.TextField()
     workplace_preparation_text2 = models.TextField()
     workplace_preparation_text3 = models.TextField()
-    name = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
-    surname = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
 
 
