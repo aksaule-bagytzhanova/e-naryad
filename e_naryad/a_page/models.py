@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.base import Model
 
 # Create your models here.
 
@@ -10,7 +11,7 @@ class Employee(models.Model):
     position = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return self.name  
+        return self.username  
 
 class Employee_Time(models.Model):
     username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
@@ -18,38 +19,70 @@ class Employee_Time(models.Model):
     holiday_h = models.BigIntegerField(null=True)
     sick_h = models.BigIntegerField(null=True)
 
+    def __str__(self):
+        return self.username  
+
 class Organization(models.Model):
     name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name 
+
 class Plot(models.Model):
     name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.name  
 
 class Admitting(models.Model):
-    name = models.CharField(max_length=200)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username)
 
 class Team_members(models.Model):
-    name = models.CharField(max_length=200)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username)
 
 class Category_of_work(models.Model):
     name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.name  
 
 class Subdivision(models.Model):
     name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.name  
 
 class Work_manager(models.Model):
-    name = models.CharField(max_length=200)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username) 
 
 class Manufacturer_work_manager(models.Model):
-    name = models.CharField(max_length=200)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username) 
 
 class To_observer(models.Model):
-    name = models.CharField(max_length=200)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username)  
 
 class Entrusted(models.Model):
-    name = models.CharField(max_length=200)
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username) 
 
 class An_object(models.Model):
     name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.name  
+
+class Work_supervisor(models.Model):
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username)  
+
 
 
 class create_e_naryad_table_1(models.Model):
@@ -72,6 +105,13 @@ class create_e_naryad_table_1(models.Model):
     workplace_preparation_text3 = models.TextField()
     username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
 
+class Order(models.Model):
+    number_naryad = models.IntegerField()
+    technical_activities = models.CharField(max_length=200, null=True)
+    place_name_work = models.CharField(max_length=200, null=True)
+    work_supervisor = models.CharField(max_length=200, null=True)
+    team_members = models.CharField(max_length=200, null=True)
+  
 
 
 

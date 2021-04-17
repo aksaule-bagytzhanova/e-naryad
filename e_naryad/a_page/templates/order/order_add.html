@@ -34,7 +34,7 @@
         </ul>
       </div><br />
 
-      <form method="post" action="">
+      <form method="POST" action="">
         <div class="form-group">
             <label for="measure">Технические мероприятия:</label>
             <input type="text" class="form-control" name="measure" value=""/>
@@ -44,26 +44,42 @@
             <input type="text" class="form-control" name="place" value=""/>
         </div>
         <div class="form-group">
-            <label for="operator">Производитель работ или наблюдающий (фамилия, инициалы, группа):</label>
-            <input type="text" class="form-control" name="operator" value=""/>
+          <label>Производитель работ или наблюдающий (фамилия, инициалы, группа):</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Enter: </option>
+                  </select>
         </div>
         <div class="form-group">
-            <label for="mate">Члены бригады работающей по распоряжению (Ф.И.О. группа):</label>
-            <input type="text" class="form-control" name="mate" value=""/>
+          <label>Члены бригады работающей по распоряжению (Ф.И.О. группа):</label>
+          <select class="form-control select2" style="width: 100%;">
+            <option selected="selected">Enter: </option>
+          </select>
         </div>
         <div class="form-group">
-            <label for="authorizer">Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа):</label>
-            <input type="text" class="form-control" name="authorizer" value=""/>
+          <label>Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа):</label>
+          <select class="form-control select2" style="width: 100%;">
+            <option selected="selected">Enter: </option>
+          </select>
         </div>
         <div class="form-group">
             <label for="start">К работе приступили (дата, время):</label>
-            <input type="text" class="form-control" name="start" value=""/>
+            <div class="input-group date" id="startdate" data-target-input="nearest">
+              <input type="text" class="form-control datetimepicker-input" data-target="#startdate"/>
+              <div class="input-group-append" data-target="#startdate" data-toggle="datetimepicker">
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
         </div>
+      </div>
         <div class="form-group">
             <label for="finish">Работа закончена (дата, время):</label>
-            <input type="text" class="form-control" name="finish" value=""/>
+            <div class="input-group date" id="startdate" data-target-input="nearest">
+              <input type="text" class="form-control datetimepicker-input" data-target="#startdate"/>
+              <div class="input-group-append" data-target="#startdate" data-toggle="datetimepicker">
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
         </div>
-        <button type="submit" class="btn btn-primary">Обновить данные</button>
+      </div>
+        <button type="submit" class="btn btn-primary" name="Submit">Обновить данные</button>
     </form>
   </div>
 </div>
@@ -71,5 +87,7 @@
 </div>
 <!-- /.content-wrapper -->
 </div>
+
+
 
 {% endblock %}

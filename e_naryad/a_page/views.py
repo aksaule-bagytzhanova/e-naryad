@@ -1,10 +1,14 @@
 from django.shortcuts import render
+from django.urls import path
+from .models import *
 
 # Create your views here.
 def page1(request):
     return render(request, 'page1.html')
 
 def enar(request):
+    employees = Employee.objects.all()
+    
     return render(request, 'enar.html')
 
 def create_nar_page1(request):
@@ -23,6 +27,8 @@ def order_edit(request):
     return render(request, 'order/order_edit.html')
 
 def order_add(request):
+
+    context={}
     return render(request, 'order/order_add.html')
 
 def passport_i(request):
@@ -79,8 +85,11 @@ def gate(request):
 def add_sick(request):
     return render(request, 'attendance/add_sick.html')
 
-def profile(request):
-    return render(request, 'profile.html')
+def employee(request, pk_test):
+    employees = Employee.objects.filter(id=pk_test) 
+
+    context = {'employees':employees}
+    return render(request, 'employee.html', context)
 
 def flexi_time(request):
     return render(request, 'attendance/flexi_time.html')

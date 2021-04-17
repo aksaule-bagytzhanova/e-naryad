@@ -23,9 +23,11 @@
           <div class="card">
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
-                <img src="{% static 'images/user.jpg' %}" alt="Admin" class="rounded-circle" width="150">
+                <img src="" alt="Admin" class="rounded-circle" width="150">
                 <div class="mt-3">
-                  <h4>Kim Jun-myeon</h4>
+                  {% for i in employees %}
+                    <h4>{{i.name}}</h4>
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -39,36 +41,44 @@
                 <div class="col-sm-3">
                   <h6 class="mb-0">Employee Id</h6>
                 </div>
+                {% for i in employees %}
                 <div class="col-sm-9 text-secondary">
-                  KimJunM123
+                    {{i.username}}
                 </div>
+                {% endfor %}
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Name</h6>
                 </div>
+                {% for i in employees %}
                 <div class="col-sm-9 text-secondary">
-                  Kim                 
+                    {{i.name}}                 
                 </div>
+                {% endfor %}
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Surname</h6>
                 </div>
+                {% for i in employees %}
                 <div class="col-sm-9 text-secondary">
-                  Jun-myeon                
+                    {{i.surname}}                 
                 </div>
+                {% endfor %}
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Position</h6>
                 </div>
+                {% for i in employees %}
                 <div class="col-sm-9 text-secondary">
-                  Full Stack Developer               
+                    {{i.position}}               
                  </div>
+                 {% endfor %}
               </div>
               <hr>
               

@@ -26,16 +26,21 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
+      
               <div class="box box-primary mt-3 pl-3 ml-5">
             <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="{% static 'images/user.jpg' %}" alt="User profile picture" href="{% url 'profile' %}">
+                <img class="profile-user-img img-responsive img-circle" src="{% static 'images/user.jpg' %} " alt="User profile picture" href="#">
             <!-- /.box-body -->
           </div>
+          {% for employee in employees %}
         <div class="info">
-          <a href="{% url 'profile' %}" class="d-block">Kim Jun-myeon</a>
+         
+          <a href="{% url 'employee' employee.id %}" class="d-block">{{employee.name}} {{employee.surname}}</a>
+          
         </div>
+        {% endfor %}
       </div>
-     
+      
       <div class="user-panel mt-3 pb-3 mb-3 ">
 
 
