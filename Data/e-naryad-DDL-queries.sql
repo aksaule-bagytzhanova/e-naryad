@@ -185,4 +185,73 @@ CREATE TABLE IF NOT EXISTS Employee_sick_leave(
        REFERENCES  Employee(Employee_id)
 );
 
+DROP TABLE IF EXISTS Organization;
+CREATE TABLE IF NOT EXISTS Organization(
+  name VARCHAR NOT NULL
+);
+DROP TABLE IF EXISTS Plot;
+CREATE TABLE IF NOT EXISTS Plot(
+  name VARCHAR NOT NULL
+);
+DROP TABLE IF EXISTS Admitting;
+CREATE TABLE IF NOT EXISTS Admitting(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+DROP TABLE IF EXISTS Team_members;
+CREATE TABLE IF NOT EXISTS Team_members(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+DROP TABLE IF EXISTS Category_of_work;
+CREATE TABLE IF NOT EXISTS Category_of_work(
+  name VARCHAR NOT NULL
+);
+DROP TABLE IF EXISTS Subdivision;
+CREATE TABLE IF NOT EXISTS Subdivision(
+  name VARCHAR NOT NULL
+);
+
+DROP TABLE IF EXISTS Manufacturer_work_manager;
+CREATE TABLE IF NOT EXISTS Manufacturer_work_manager(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+DROP TABLE IF EXISTS Work_manager;
+CREATE TABLE IF NOT EXISTS Work_manager(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+DROP TABLE IF EXISTS To_observer;
+CREATE TABLE IF NOT EXISTS To_observer(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+DROP TABLE IF EXISTS Entrusted ;
+CREATE TABLE IF NOT EXISTS Entrusted(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+DROP TABLE IF EXISTS An_object;
+CREATE TABLE IF NOT EXISTS An_object(
+  name VARCHAR NOT NULL
+);
+DROP TABLE IF EXISTS Work_supervisor ;
+CREATE TABLE IF NOT EXISTS Work_supervisor(
+  username VARCHAR NOT NULL,
+	 FOREIGN KEY (username)
+       REFERENCES  Employee(Name)
+);
+
+
+
+
+
+
 
