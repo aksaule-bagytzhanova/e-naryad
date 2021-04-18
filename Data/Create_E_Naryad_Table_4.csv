@@ -1,4 +1,3 @@
-Table_four_id,Username,place_work,number,hazards_risks_id,date,company,job_task,members_group,stages_of work,Possible_potential_accidents,control_measures,are_there_control_measures
 1,Sultanov_Azamat,4510 S MICHIGAN AVENUE EFT,77041,1,7/5/2011,CHICAGO URBAN LEAGUE DEV CORP,,"Akhmetov_Abzal,Omarov_Aydos",,,,yes
 2,Sultanov_Azamat,4150 S KING DRIVE EFT,106913,2,3/30/2015,CENTERS FOR NEW HORIZONS 01,,"Akhmetov_Abzal,Omarov_Aydos",,,,no
 3,Suleimenova_Gaukhar,DEPT CH 0075,117383,3,7/5/2011,MSC INDUSTRIAL SUPPLY CO,,"Akhmetov_Abzal, Sultanov_Azamat	",,,,yes
