@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS Employee(
 	Name VARCHAR NOT NULL,
 	Surname VARCHAR NOT NULL,
 	Position VARCHAR NOT NULL ,
+	Username VARCHAR NOT NULL ,
 	Password VARCHAR NOT NULL 
 );
 
@@ -14,12 +15,12 @@ CREATE TABLE IF NOT EXISTS Employee(
 
 DROP TABLE IF EXISTS Employee_time;
 CREATE TABLE IF NOT EXISTS Employee_time(
+Username VARCHAR NOT NULL,
     Employee_Hours_At_Work INTEGER NOT NULL,
-	Employee_id INTEGER NOT NULL,
     Holiday_Hours INTEGER NOT NULL,
     Sick_Hours INTEGER NOT NULL,
-    FOREIGN KEY (Employee_id)
-       REFERENCES  Employee(Employee_id) 
+    FOREIGN KEY (Username)
+       REFERENCES  Employee(Username) 
 );
 
 --------------------------------------------------------
@@ -27,12 +28,12 @@ CREATE TABLE IF NOT EXISTS Employee_time(
 
 DROP TABLE IF EXISTS System_Time_In_Month;
 CREATE TABLE IF NOT EXISTS System_Time_In_Month(
-	Employee_id INTEGER NOT NULL,
+	Username VARCHAR NOT NULL,
     Time_At_Work INTEGER NOT NULL,
     Holiday_time INTEGER NOT NULL,
     Vacation_Time INTEGER NOT NULL,
-    FOREIGN KEY (Employee_id)
-       REFERENCES  Employee(Employee_id) 
+    FOREIGN KEY (Username)
+       REFERENCES  Employee(Username) 
 
 );
 
@@ -73,13 +74,13 @@ CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_1(
 DROP TABLE IF EXISTS Messages;
 CREATE TABLE IF NOT EXISTS Messages(
     Messages_id INTEGER PRIMARY KEY AUTOINCREMENT,
-	Employee_id INTEGER NOT NULL,
+	Username VARCHAR  NOT NULL,
     Subject VARCHAR NOT NULL,
     Date_sent DATETIME DEFAULT current_timestamp,
     Sent_From VARCHAR NOT NULL,
     Messages_Text TEXT DEFAULT NULL,
-    FOREIGN KEY (Employee_id)
-       REFERENCES  Employee(Employee_id) 
+    FOREIGN KEY (Username)
+       REFERENCES  Employee(Username) 
 
 );
 
@@ -89,13 +90,13 @@ CREATE TABLE IF NOT EXISTS Messages(
 DROP TABLE IF EXISTS Create_E_Naryad_Table_2;
 CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_2(
     Table_Two_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    Employee_id INTEGER NOT NULL,
+    Username VARCHAR NOT NULL,
     Person_Issued_Outfit VARCHAR NOT NULL,
     Signature_Outfit VARCHAR NOT NULL,
     Responsible_Work_Manager VARCHAR NOT NULL,
     Signature_W_Manager VARCHAR NOT NULL,
-    FOREIGN KEY (Employee_id)
-       REFERENCES  Employee(Employee_id) 
+    FOREIGN KEY (Username)
+       REFERENCES  Employee(Username) 
 );
 
 --------------------------------------------------------
@@ -159,21 +160,21 @@ CREATE TABLE IF NOT EXISTS Disposal_Journal(
 
 DROP TABLE IF EXISTS Employee_add_gate;
 CREATE TABLE IF NOT EXISTS Employee_add_gate(
-  Employee_id INTEGER NOT NULL ,
+  Username VARCHAR NOT NULL ,
 	start_time VARCHAR DATETIME   DEFAULT CURRENT_TIME   ,
 	end_time VARCHAR DATETIME   DEFAULT NULL ,
 	date VARCHAR DATETIME   DEFAULT CURRENT_DATE   ,
-  FOREIGN KEY (Employee_id)
-       REFERENCES  Employee(Employee_id)
+  FOREIGN KEY (Username)
+       REFERENCES  Employee(Username)
 );
 
 DROP TABLE IF EXISTS Employee_add_holiday;
 CREATE TABLE IF NOT EXISTS Employee_add_holiday(
-  Employee_id INTEGER NOT NULL ,
+  Username VARCHAR  NOT NULL ,
 	start_date VARCHAR DATETIME NOT NULL   ,
 	end_date VARCHAR DATETIME  NOT NULL  ,
-  FOREIGN KEY (Employee_id)
-       REFERENCES  Employee(Employee_id)
+  FOREIGN KEY (Username)
+       REFERENCES  Employee(Username)
 );
 
 DROP TABLE IF EXISTS Employee_sick_leave;
