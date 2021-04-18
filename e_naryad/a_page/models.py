@@ -109,8 +109,14 @@ class Order(models.Model):
     number_naryad = models.IntegerField()
     technical_activities = models.CharField(max_length=200, null=True)
     place_name_work = models.CharField(max_length=200, null=True)
-    work_supervisor = models.CharField(max_length=200, null=True)
-    team_members = models.CharField(max_length=200, null=True)
+    work_supervisor = models.ForeignKey(Work_supervisor, null=True, on_delete=models.SET_NULL)
+    team_members = models.ManyToManyField(Team_members)
+    person_give_naryad =  models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    started_work = models.DateField()
+    work_done = models.DateField()
+    
+
+
   
 
 

@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
 
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
@@ -29,54 +30,61 @@
 
       <div class="alert alert-danger">
         <ul>
-        
-
         </ul>
       </div><br />
 
-      <form method="POST" action="">
+      <form method="POST" action="" >
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="measure">Номер распоряжения:</label>
+          <div class="form-group"> 
+            {{form.number_naryad}}
+          </div>
+
+
+      </div>
         <div class="form-group">
             <label for="measure">Технические мероприятия:</label>
-            <input type="text" class="form-control" name="measure" value=""/>
+            <div class="form-group"> 
+              {{form.technical_activities}}
+            </div>
         </div>
         <div class="form-group">
             <label for="place">Место и наименование работы:</label>
-            <input type="text" class="form-control" name="place" value=""/>
+            <div class="form-group"> 
+              {{form.place_name_work}}
+            </div>
         </div>
         <div class="form-group">
           <label>Производитель работ или наблюдающий (фамилия, инициалы, группа):</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Enter: </option>
-                  </select>
+          <div class="form-group"> 
+            {{form.work_supervisor}}
+          </div>
         </div>
         <div class="form-group">
           <label>Члены бригады работающей по распоряжению (Ф.И.О. группа):</label>
-          <select class="form-control select2" style="width: 100%;">
-            <option selected="selected">Enter: </option>
-          </select>
+          <div class="form-group"> 
+            {{form.team_members}}
+          </div>
         </div>
         <div class="form-group">
           <label>Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа):</label>
-          <select class="form-control select2" style="width: 100%;">
-            <option selected="selected">Enter: </option>
-          </select>
+          <div class="form-group"> 
+            {{form.person_give_naryad}}
+          </div>
         </div>
         <div class="form-group">
             <label for="start">К работе приступили (дата, время):</label>
             <div class="input-group date" id="startdate" data-target-input="nearest">
-              <input type="text" class="form-control datetimepicker-input" data-target="#startdate"/>
-              <div class="input-group-append" data-target="#startdate" data-toggle="datetimepicker">
-                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              <div class="form-group"> 
+                {{form.started_work}}
               </div>
         </div>
       </div>
         <div class="form-group">
             <label for="finish">Работа закончена (дата, время):</label>
             <div class="input-group date" id="startdate" data-target-input="nearest">
-              <input type="text" class="form-control datetimepicker-input" data-target="#startdate"/>
-              <div class="input-group-append" data-target="#startdate" data-toggle="datetimepicker">
-                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-              </div>
+              <input type="date" class="form-control" id="start_date" placeholder="Date">
         </div>
       </div>
         <button type="submit" class="btn btn-primary" name="Submit">Обновить данные</button>
