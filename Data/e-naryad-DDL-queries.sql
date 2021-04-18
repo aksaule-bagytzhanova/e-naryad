@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS System_Time_In_Month(
 
 DROP TABLE IF EXISTS Create_E_Naryad_Table_1;
 CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_1(
-    Table_One_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Username INTEGER PRIMARY KEY AUTOINCREMENT,
     	Employee_id INTEGER NOT NULL,
         Organization VARCHAR NOT NULL,
         Plot VARCHAR NOT NULL,
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_2(
 DROP TABLE IF EXISTS Create_E_Naryad_Table_3;
 CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_3(
     Table_Three_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    Employee_id INTEGER NOT NULL,
+    Username INTEGER NOT NULL,
     Outfit_gave VARCHAR NOT NULL,
     Signature VARCHAR NOT NULL,
     Date_time DATETIME DEFAULT current_timestamp,
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_3(
 DROP TABLE IF EXISTS Create_E_Naryad_Table_4;
 CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_4(
     Table_Four_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    Employee_id INTEGER NOT NULL,
+    Username INTEGER NOT NULL,
     Number INTEGER NOT NULL,
     Hazards_Risks_Ident VARCHAR NOT NULL,
     Date DATETIME DEFAULT current_date,
@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_4(
 DROP TABLE IF EXISTS Disposal_Journal;
 CREATE TABLE IF NOT EXISTS Disposal_Journal(
     Dis_Journal_Id INTEGER PRIMARY KEY AUTOINCREMENT,
-    Employee_id INTEGER NOT NULL,
+    Username INTEGER NOT NULL,
     Technical_Activities VARCHAR NOT NULL,
     Place_Name_Of_Work VARCHAR NOT NULL,
     Supervising VARCHAR NOT NULL,
