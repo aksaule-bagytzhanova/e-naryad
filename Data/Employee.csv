@@ -1,10 +1,10 @@
 EmployeeId,Name,Surname,Position,Username,Password
-1,Азамат,Султанов,главный инженер,Sultanov_Azamat,AAA7
-2,Гаухар,Сулейменова,геологоразведчик,Suleimenova_Gaukhar,AAA6
-3,Анар,Ибраева,экоаналитик,Ibraeva_Anar,AAA5
-4,Марат,Кусаинов,техник,Kussainov_Marat,AAA8
-5,Серик,Абдуллаев,инженер,Abdullaev_Serik,AAA4
-6,Айдос,Омаров,инженер,Omarov_Aydos,AAA3
-7,Куанбек,Бигалиев,Deputy General Director for Production Issues,Bigaliev_Kuanbek,AAA2
-8,Нурдаулет,Косбаев,CEO,Kosbaev_Nurdaulet,AAA1
-9,Абзал,Ахметов,инженер,Akhmetov_Abzal,AAA
+1,Azamat,Sultanov,Sultanov ГЁГ­Г¦ГҐГ­ГҐГ°,Sultanov_Azamat,AAA7
+2,ГѓГ ГіГµГ Г°,Г‘ГіГ«ГҐГ©Г¬ГҐГ­Г®ГўГ ,ГЈГҐГ®Г«Г®ГЈГ®Г°Г Г§ГўГҐГ¤Г·ГЁГЄ,Suleimenova_Gaukhar,AAA6
+3,ГЂГ­Г Г°,Г€ГЎГ°Г ГҐГўГ ,ГЅГЄГ®Г Г­Г Г«ГЁГІГЁГЄ,Ibraeva_Anar,AAA5
+4,ГЊГ Г°Г ГІ,ГЉГіГ±Г ГЁГ­Г®Гў,ГІГҐГµГ­ГЁГЄ,Kussainov_Marat,AAA8
+5,Г‘ГҐГ°ГЁГЄ,ГЂГЎГ¤ГіГ«Г«Г ГҐГў,ГЁГ­Г¦ГҐГ­ГҐГ°,Abdullaev_Serik,AAA4
+6,ГЂГ©Г¤Г®Г±,ГЋГ¬Г Г°Г®Гў,ГЁГ­Г¦ГҐГ­ГҐГ°,Omarov_Aydos,AAA3
+7,ГЉГіГ Г­ГЎГҐГЄ,ГЃГЁГЈГ Г«ГЁГҐГў,Deputy General Director for Production Issues,Bigaliev_Kuanbek,AAA2
+8,ГЌГіГ°Г¤Г ГіГ«ГҐГІ,ГЉГ®Г±ГЎГ ГҐГў,CEO,Kosbaev_Nurdaulet,AAA1
+9,ГЂГЎГ§Г Г«,ГЂГµГ¬ГҐГІГ®Гў,ГЁГ­Г¦ГҐГ­ГҐГ°,Akhmetov_Abzal,AAA
