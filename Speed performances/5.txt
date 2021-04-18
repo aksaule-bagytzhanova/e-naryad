@@ -1,0 +1,22 @@
+SQL command:
+Initial query:
+SELECT Username,Admitting,place_work FROM Create_E_Naryad_Table_1 
+ JOIN Admitting ON
+ Create_E_Naryad_Table_1.Admitting=Admitting.Admitting
+ JOIN Category_Of_work ON
+ Create_E_Naryad_Table_1.Category_Of_work=Category_of_work.Category_Of_work 
+ WHERE Category_Of_work="Категория 3";
+
+
+Average speed perfomance:
+(22.122621536254883 + 17.977476119995117 + 16.956090927124023 + 20.943641662597656 + 19.463062286376953)/5 = 20.5455303192 ms
+
+
+SELECT Username,Admitting,place_work FROM
+ Create_E_Naryad_Table_1 a,Admitting b ,Category_Of_work c
+ WHERE a.Admitting=b.Admitting AND 
+ a.Category_Of_work=c.Category_Of_work AND
+ Category_Of_work="Категория 3";
+
+
+17.925024032592773 ms

@@ -1,0 +1,22 @@
+SQL command:
+Initial query:
+SELECT DISTINCT name, surname, Technical_Activities, Supervising, Team_Members_Working_On_Orders, Person_Issued_Outfit
+FROM Disposal_jounal INNER JOIN Create_E_Naryad_Table_3 ON Disposal_jounal.username = Create_E_Naryad_Table_3.username
+INNER JOIN Employee Disposal_jounal.username = Employee.username
+WHERE employee.username = 'Sultanov_Azamat'
+
+
+Average speed perfomance:
+(21.938323974609375 + 20.943880081176758 + 25.59661865234375 + 16.95561408996582 + 27.925491333007812)/5 = 22.6719856262 ms
+
+
+
+
+Optimized query:
+SELECT DISTINCT name, surname, Technical_Activities, Supervising, Team_Members_Working_On_Orders, Person_Issued_Outfit
+FROM Disposal_jounal a, Create_E_Naryad_Table_3 b, Employee c
+WHERE a.username = b.username AND B.username = C.username AND a.username = 'Sultanov_Azamat'
+
+
+Optimized query's speed perfomance:
+15.981435775756836 ms

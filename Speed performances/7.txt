@@ -1,0 +1,19 @@
+SQL command:
+Initial query:
+SELECT Username,Position,place_work,number,date,members_group
+FROM Create_E_Naryad_Table_4 JOIN Employee ON
+employee.username = Create_E_Naryad_Table_4.username
+ WHERE members_group="Akhmetov_Abzal,Omarov_Aydos";
+
+
+Average speed perfomance:
+(17.916440963745117 + 20.943641662597656 + 19.957304000854492 + 18.94831657409668 + 13.474225997924805)/5 = 18.2479858398 ms
+
+
+SELECT Username,Position,place_work,number,date,members_group
+ FROM Create_E_Naryad_Table_4  a,Employee  b WHERE
+ a.username = b.username AND
+ members_group="Akhmetov_Abzal,Omarov_Aydos";
+
+
+18.00465583801269 ms

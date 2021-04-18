@@ -1,0 +1,23 @@
+SQL command:
+Initial query:
+SELECT DISTINCT name, surname, Position, employee_hours_at_work
+FROM Employee INNER JOIN Employee_time ON Employee.username = Employee_time.username
+WHERE employee.username = 'Ibraeva_Anar'
+
+Average speed perfomance:
+(22.937297821044922 + 11.968135833740234 + 13.480424880981445 + 15.957355499267578 + 14.958858489990234)/5 = 15.860414505 ms
+
+
+
+Optimized query:
+SELECT DISTINCT name, surname, Position, employee_hours_at_work
+FROM Employee a, Employee_time b
+WHERE a.username = b.username AND a.username = 'Ibraeva_Anar'
+
+
+
+Optimized query's speed perfomance:
+
+9.604692459106445 ms
+
+

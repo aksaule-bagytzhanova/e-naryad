@@ -1,0 +1,15 @@
+SQL command:
+Initial query:
+SELECT DISTINCT name, surname, Subject, Date_Sent, Messages_Text
+FROM Employee INNER JOIN Messages ON Employee.username = Messages.sent_to
+WHERE employee.username = 'Omarov_Aydos'
+
+Average speed perfomance:
+(17.95220375061035 + 18.970727920532227 + 16.953706741333008 + 24.91307258605957 + 23.93794059753418)/5 = 20.5455303192 ms
+
+
+SELECT DISTINCT name, surname, Subject, Date_Sent, Messages_Text
+FROM Employee a, Messages b
+WHERE a.username = b.username AND a.username = 'Omarov_Aydos'
+
+19.947290420532227 ms

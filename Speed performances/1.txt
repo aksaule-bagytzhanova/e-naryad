@@ -1,0 +1,16 @@
+SQL command:
+Initial query:
+SELECT DISTINCT name, surname, password, team_members, date_time, admitting
+FROM employee INNER JOIN Create_E_Naryad_Table_3 ON employee.username = Create_E_Naryad_Table_3.username
+WHERE employee.username = 'Sultanov_Azamat'
+
+Average speed perfomance:
+(10.500526428222656 + 34.533023834228516 + 35.90226173400879 + 17.952442169189453 + 18.939495086669922)/5 = 23.5655498505 ms
+
+Optimized query:
+SELECT DISTINCT name, surname, password, team_members, date_time, admitting
+FROM employee a, Create_E_Naryad_Table_3 b
+WHERE a.username = b.username AND a.username = 'Sultanov_Azamat'
+
+Optimized query's speed perfomance:
+17.95148849487304 ms

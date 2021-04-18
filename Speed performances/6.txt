@@ -1,0 +1,18 @@
+SQL command:
+Initial query:
+SELECT Username,Position,Signature_Outfit 
+FROM Create_E_Naryad_Table_2 
+JOIN Employee ON Employee.username = Create_E_Naryad_Table_2 .username
+WHERE Employee.Position="Chief Engineer ";
+
+
+Average speed perfomance:
+(14.961719512939453 + 25.95353126525879 + 18.94831657409668 + 15.95306396484375 + 20.943641662597656)/5 = 19.4925785065 ms
+
+
+SELECT Username,Position,Signature_Outfit 
+FROM Create_E_Naryad_Table_2 a,Employee b 
+WHERE a.username = b.username AND b.Position="Chief Engineer ";
+
+
+18.949270248413086 ms
