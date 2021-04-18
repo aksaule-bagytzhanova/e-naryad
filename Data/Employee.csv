@@ -1,10 +1,10 @@
 EmployeeId,Name,Surname,Position,Username,Password
-1,Azamat,Sultanov,Sultanov èíæåíåð,Sultanov_Azamat,AAA7
-2,Ãàóõàð,Ñóëåéìåíîâà,ãåîëîãîðàçâåä÷èê,Suleimenova_Gaukhar,AAA6
-3,Àíàð,Èáðàåâà,ýêîàíàëèòèê,Ibraeva_Anar,AAA5
-4,Ìàðàò,Êóñàèíîâ,òåõíèê,Kussainov_Marat,AAA8
-5,Ñåðèê,Àáäóëëàåâ,èíæåíåð,Abdullaev_Serik,AAA4
-6,Àéäîñ,Îìàðîâ,èíæåíåð,Omarov_Aydos,AAA3
-7,Êóàíáåê,Áèãàëèåâ,Deputy General Director for Production Issues,Bigaliev_Kuanbek,AAA2
-8,Íóðäàóëåò,Êîñáàåâ,CEO,Kosbaev_Nurdaulet,AAA1
-9,Àáçàë,Àõìåòîâ,èíæåíåð,Akhmetov_Abzal,AAA
+1,Azamat,Sultanov,Chief Engineer,Sultanov_Azamat,AAA7
+2,Gaukhar,Suleimenova,Explorer,Suleimenova_Gaukhar,AAA6
+3,Anar,Ibraeva,Ecoanalyst,Ibraeva_Anar,AAA5
+4,Marat,Kussainov,Technician,Kussainov_Marat,AAA8
+5,Serik,Abdullaev,Engineer,Abdullaev_Serik,AAA4
+6,Aydos,Omarov,Engineer,Omarov_Aydos,AAA3
+7,Kuanbek,Bigaliev,Deputy General Director for Production Issues,Bigaliev_Kuanbek,AAA2
+8,Nurdaulet,Kosbaev,CEO,Kosbaev_Nurdaulet,AAA1
+9,Abzal,Akhmetov,Engineer,Akhmetov_Abzal,AAA
