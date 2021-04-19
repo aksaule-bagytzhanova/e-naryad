@@ -27,8 +27,16 @@ def order_index(request):
     context={'orders':orders}
     return render(request, 'order/order_index.html', context) 
 
-def order_edit(request):
-    form = OrderForm() 
+def order_edit(request, pk):
+
+    order = Order.objects.get(id=pk)
+    form = OrderForm(instance=order) 
+
+    if request.method == 'POST':
+        form = OrderForm(request.POST, instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('order_i')
 
     context={'form':form}
     return render(request, 'order/order_add.html', context)
@@ -43,7 +51,7 @@ def order_add(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('order_i')
 
 
     context={'form':form}
