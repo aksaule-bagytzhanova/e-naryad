@@ -63,31 +63,24 @@
         </div>
         <div class="form-group">
           <label>Члены бригады работающей по распоряжению (Ф.И.О. группа):</label>
-          <div class="form-group"> 
             {{form.team_members}}
-          </div>
+        
         </div>
         <div class="form-group">
           <label>Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа):</label>
-          <div class="form-group"> 
+         
             {{form.person_give_naryad}}
-          </div>
+         
         </div>
         <div class="form-group">
             <label for="start">К работе приступили (дата, время):</label>
-            <div class="input-group date" id="startdate" data-target-input="nearest">
-              <div class="form-group"> 
-                {{form.started_work}}
-              </div>
-        </div>
+            {{form.started_work}}
       </div>
         <div class="form-group">
             <label for="finish">Работа закончена (дата, время):</label>
-            <div class="input-group date" id="startdate" data-target-input="nearest">
-              <input type="date" class="form-control" id="start_date" placeholder="Date">
-        </div>
+            {{form.work_done}}
       </div>
-        <button type="submit" class="btn btn-primary" name="Submit">Обновить данные</button>
+        <button type="submit" class="btn btn-primary" name="Submit">Добавить данные</button>
     </form>
   </div>
 </div>

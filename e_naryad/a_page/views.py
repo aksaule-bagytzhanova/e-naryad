@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.urls import path
 from .models import *
 from .forms import OrderForm
+
 # Create your views here.
 def page1(request):
     return render(request, 'page1.html')
@@ -30,6 +31,7 @@ def order_add(request):
 
     form = OrderForm()
     context={'form':form}
+    
     
     return render(request, 'order/order_add.html', context)
 
