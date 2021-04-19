@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import path
 from .models import *
 from .forms import OrderForm
@@ -22,17 +22,31 @@ def close_nar_page1(request):
     return render(request, 'close_nar_page1.html')
 
 def order_index(request):
-    return render(request, 'order/order_index.html') 
+    orders = Order.objects.all()
+
+    context={'orders':orders}
+    return render(request, 'order/order_index.html', context) 
 
 def order_edit(request):
-    return render(request, 'order/order_edit.html')
+    form = OrderForm() 
+
+    context={'form':form}
+    return render(request, 'order/order_add.html', context)
 
 def order_add(request):
 
     form = OrderForm()
+    
+    
+    if request.method == 'POST':
+        # print('Printing POST: ', request.POST)
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+
     context={'form':form}
-    
-    
     return render(request, 'order/order_add.html', context)
 
 def passport_i(request):
