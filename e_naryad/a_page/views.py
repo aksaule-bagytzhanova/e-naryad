@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import path
 from .models import *
 from .forms import OrderForm
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 def page1(request):
@@ -128,4 +129,8 @@ def plan_index(request):
 
 def messages_index(request):
     return render(request, 'messages/mess_index.html')
+
+def login(request):
+    return render(request, 'login.html')
+
 

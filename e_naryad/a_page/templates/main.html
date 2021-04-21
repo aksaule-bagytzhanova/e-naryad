@@ -61,12 +61,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
 
-  <h1>
-
-    <span id="timeInSeconds"></span>
-    <span>seconds</span>
-
-  </h1>
+  
 
     {% include 'sidebar.html' %}
 
@@ -238,35 +233,6 @@
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 
-<script src="{% static '/js/timeme.min.js' %}"></script>
-<script type="text/javascript">
-    
-	TimeMe.initialize({
-		currentPageName: "my-home-page", // current page
-		idleTimeoutInSeconds: 5, // stop recording time due to inactivity
-	});
-
-	TimeMe.callAfterTimeElapsedInSeconds(4, function(){
-		console.log("The user has been using the page for 4 seconds! Let's prompt them with something.");
-	});
-
-	TimeMe.callAfterTimeElapsedInSeconds(9, function(){
-		console.log("The user has been using the page for 9 seconds! Let's prompt them with something.");
-	});
-
-
-	window.onload = function(){
-		TimeMe.trackTimeOnElement('area-of-interest-1');
-		TimeMe.trackTimeOnElement('area-of-interest-2');
-		setInterval(function(){
-			var timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
-			document.getElementById('timeInSeconds').textContent = timeSpentOnPage.toFixed(2);
-
-			
-		}, 25);
-	}
-
-</script>
 
 <!-- Page specific script -->
 <script>

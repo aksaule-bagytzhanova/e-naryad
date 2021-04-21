@@ -1,7 +1,12 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.db.models import fields
 from django.forms import ModelForm, widgets
 from .models import Order
 from django.core import validators
+from django.contrib.auth.models import User
+from django import forms
+
+
 
 class OrderForm(ModelForm):
     class Meta:
@@ -18,3 +23,4 @@ class OrderForm(ModelForm):
             'work_done':  widgets.DateInput(attrs={'class':'form-control' ,'id':"start_date", 'placeholder':"Date", 'type':"date"})
 
         }
+
