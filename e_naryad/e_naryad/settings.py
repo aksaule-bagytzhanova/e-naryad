@@ -40,12 +40,11 @@ INSTALLED_APPS = [
     'a_page.apps.APageConfig',
     'django_filters',
     'crispy_forms',
-    'tracking',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'tracking.middleware.VisitorTrackingMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'e_naryad.wsgi.application'
-TRACK_AJAX_REQUESTS = getattr(settings, 'TRACK_AJAX_REQUESTS', False)
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

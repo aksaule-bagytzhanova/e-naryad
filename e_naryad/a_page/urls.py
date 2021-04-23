@@ -3,6 +3,8 @@ from django.urls.conf import include
 from . import views
 
 urlpatterns = [
+    path('login/', views.loginPage, name='login'),
+    path('logout/', views.logOutPage, name='logOut'),
     path('', views.enar,name='enar'),
     path('page/', views.page1),
     path('create_nar/', views.create_nar_page1, name='create_nar_page1'),
@@ -34,7 +36,7 @@ urlpatterns = [
     path('add_holiday', views.add_holiday, name='add_holiday'),
     path('plan_index', views.plan_index, name='plan_index'),
     path('mess_index', views.messages_index, name='mess_index'),
-    path('login/', views.login, name='login'),
+    
     
     
     
