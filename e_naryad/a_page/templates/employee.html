@@ -23,11 +23,22 @@
           <div class="card">
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
-                <img src="" alt="Admin" class="rounded-circle" width="150">
+                <img src="profile-pic" src="{{request.user.employee.profile_pic.url}}" alt="Admin" class="rounded-circle" width="150">
+
+                <div class="card-body">
+                  <form method="POST" enctype="multipart/form-data" action="">
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                    <input class="btn btn-primary" type="submit" name="Update Information">
+
+                  </form>
+                </div>
                 <div class="mt-3">
-                  {% for i in employees %}
-                    <h4>{{i.name}}</h4>
-                  {% endfor %}
+                
+                
+                    <h4>NAME</h4>
+                 
                 </div>
               </div>
             </div>
@@ -41,44 +52,44 @@
                 <div class="col-sm-3">
                   <h6 class="mb-0">Employee Id</h6>
                 </div>
-                {% for i in employees %}
+               
                 <div class="col-sm-9 text-secondary">
-                    {{i.username}}
+                  USERNAME
                 </div>
-                {% endfor %}
+                
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Name</h6>
                 </div>
-                {% for i in employees %}
+                
                 <div class="col-sm-9 text-secondary">
-                    {{i.name}}                 
+                    NAME           
                 </div>
-                {% endfor %}
+                
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Surname</h6>
                 </div>
-                {% for i in employees %}
+                
                 <div class="col-sm-9 text-secondary">
-                    {{i.surname}}                 
+                    SURNAME            
                 </div>
-                {% endfor %}
+                
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Position</h6>
                 </div>
-                {% for i in employees %}
+                
                 <div class="col-sm-9 text-secondary">
-                    {{i.position}}               
+                    POSITION              
                  </div>
-                 {% endfor %}
+                
               </div>
               <hr>
               

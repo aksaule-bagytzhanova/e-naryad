@@ -1,12 +1,16 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.db.models import fields
 from django.forms import ModelForm, widgets
-from .models import Order
+from .models import Employee, Order
 from django.core import validators
 from django.contrib.auth.models import User
 from django import forms
 
-
+class EmployeeForm(ModelForm):
+    class Meta:
+        model=Employee
+        fields='__all__'
+        exclude=['user']
 
 class OrderForm(ModelForm):
     class Meta:
