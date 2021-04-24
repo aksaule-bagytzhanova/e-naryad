@@ -7,8 +7,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .decorators import allowed_users, unauthenticated_user
 
-
+@unauthenticated_user
 # Create your views here.
 def page1(request):
     return render(request, 'page1.html')
@@ -21,6 +22,7 @@ def enar(request):
     return render(request, 'enar.html')
 
 @login_required(login_url='login')
+
 
 def create_nar_page1(request):
     return render(request, 'create_nar_page1.html')
@@ -88,32 +90,52 @@ def passport_cabel(request):
 def passport_circuit(request):
     return render(request, 'passport/passport_circuit.html')
 
+@login_required(login_url='login')
+
 def passport_distribution(request):
     return render(request, 'passport/passport_distribution.html')
+
+@login_required(login_url='login')
 
 def passport_blade(request):
     return render(request, 'passport/passport_blade.html')
 
+@login_required(login_url='login')
+
 def passport_indoor(request):
     return render(request, 'passport/passport_indoor.html')
+
+@login_required(login_url='login')
 
 def passport_isg(request):
     return render(request, 'passport/passport_isg.html')
 
+@login_required(login_url='login')
+
 def passport_list(request):
     return render(request, 'passport/passport_list.html')
+
+@login_required(login_url='login')
 
 def passport_mcc(request):
     return render(request, 'passport/passport_mcc.html')
 
+@login_required(login_url='login')
+
 def passport_motor(request):
     return render(request, 'passport/passport_motor.html')
+
+@login_required(login_url='login')
 
 def passport_panel(request):
     return render(request, 'passport/passport_panel.html')
 
+@login_required(login_url='login')
+
 def passport_pg(request):
     return render(request, 'passport/passport_panel.html')
+
+@login_required(login_url='login')  
 
 def passport_substation(request):
     return render(request, 'passport/passport_substation.html')
@@ -134,30 +156,30 @@ def add_sick(request):
     return render(request, 'attendance/add_sick.html')
 
 def loginPage(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:
-        if request.method == 'POST':
-            username=request.POST.get('username')
-            password=request.POST.get('password')
+    if request.method == 'POST':
+        username=request.POST.get('username')
+        password=request.POST.get('password')
             
-            user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=username, password=password)
 
-            if user is not None:
-                login(request, user)
-                return redirect('enar')
-            else:
-                messages.info(request, 'Username OR password is incorrect')
+        if user is not None:
+            login(request, user)
+            return redirect('enar')
+        else:
+            messages.info(request, 'Username OR password is incorrect')
                 
-        return render(request, 'login.html')
+    return render(request, 'login.html')
+    
+@login_required(login_url='login')
 
 
 def logOutPage(request):
     logout(request)
     return redirect('login')
 
-
 @login_required(login_url='login')
+
+
 
 def employee(request, pk_test):
     employees = Employee.objects.filter(id=pk_test) 
@@ -165,15 +187,21 @@ def employee(request, pk_test):
     context = {'employees':employees}
     return render(request, 'employee.html', context)
 
+@login_required(login_url='login')
+
+
 def flexi_time(request):
     return render(request, 'attendance/flexi_time.html')
 
+@login_required(login_url='login')
 def add_holiday(request):
     return render(request, 'attendance/add_holiday.html')
 
+@login_required(login_url='login')
 def plan_index(request):
     return render(request, 'plan/plan_index.html')
 
+@login_required(login_url='login')
 def messages_index(request):
     return render(request, 'messages/mess_index.html')
 
