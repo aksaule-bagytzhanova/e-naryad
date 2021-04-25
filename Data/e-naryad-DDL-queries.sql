@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS System_Time_In_Month(
 
 DROP TABLE IF EXISTS Create_E_Naryad_Table_1;
 CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_1(
-    Username INTEGER PRIMARY KEY AUTOINCREMENT,
-    	Employee_id INTEGER NOT NULL,
+	Table_one_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	Username INTEGER NOT NULL,
         Organization VARCHAR NOT NULL,
         Plot VARCHAR NOT NULL,
         Admitting VARCHAR NOT NULL,
