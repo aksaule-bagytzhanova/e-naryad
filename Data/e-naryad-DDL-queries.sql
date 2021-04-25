@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS System_Time_In_Month(
 
 DROP TABLE IF EXISTS Create_E_Naryad_Table_1;
 CREATE TABLE IF NOT EXISTS Create_E_Naryad_Table_1(
-    Username INTEGER PRIMARY KEY AUTOINCREMENT,
-    	Employee_id INTEGER NOT NULL,
+	Table_one_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	Username INTEGER NOT NULL,
         Organization VARCHAR NOT NULL,
         Plot VARCHAR NOT NULL,
         Admitting VARCHAR NOT NULL,
@@ -161,9 +161,9 @@ CREATE TABLE IF NOT EXISTS Disposal_Journal(
 DROP TABLE IF EXISTS Employee_add_gate;
 CREATE TABLE IF NOT EXISTS Employee_add_gate(
   Username VARCHAR NOT NULL ,
-	start_time VARCHAR DATETIME   DEFAULT CURRENT_TIME   ,
-	end_time VARCHAR DATETIME   DEFAULT NULL ,
-	date VARCHAR DATETIME   DEFAULT CURRENT_DATE   ,
+	start_time  DATETIME   DEFAULT CURRENT_TIME   ,
+	end_time  DATETIME   DEFAULT NULL ,
+	date  DATETIME   DEFAULT CURRENT_DATE   ,
   FOREIGN KEY (Username)
        REFERENCES  Employee(Username)
 );
@@ -171,17 +171,17 @@ CREATE TABLE IF NOT EXISTS Employee_add_gate(
 DROP TABLE IF EXISTS Employee_add_holiday;
 CREATE TABLE IF NOT EXISTS Employee_add_holiday(
   Username VARCHAR  NOT NULL ,
-	start_date VARCHAR DATETIME NOT NULL   ,
-	end_date VARCHAR DATETIME  NOT NULL  ,
+	start_date  DATETIME NOT NULL   ,
+	end_date  DATETIME  NOT NULL  ,
   FOREIGN KEY (Username)
        REFERENCES  Employee(Username)
 );
 
 DROP TABLE IF EXISTS Employee_sick_leave;
 CREATE TABLE IF NOT EXISTS Employee_sick_leave(
-  Employee_id INTEGER NOT NULL ,
-	start_date VARCHAR DATETIME NOT NULL   ,
-	end_date VARCHAR DATETIME  NOT NULL  ,
+  Username VARCHAR NOT NULL ,
+	start_date  DATETIME NOT NULL   ,
+	end_date  DATETIME  NOT NULL  ,
   FOREIGN KEY (Employee_id)
        REFERENCES  Employee(Employee_id)
 );
