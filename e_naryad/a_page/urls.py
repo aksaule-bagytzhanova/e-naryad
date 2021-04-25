@@ -1,3 +1,4 @@
+from os import name
 from django.urls import path
 from django.urls.conf import include
 from . import views
@@ -36,6 +37,8 @@ urlpatterns = [
     path('add_holiday', views.add_holiday, name='add_holiday'),
     path('plan_index', views.plan_index, name='plan_index'),
     path('mess_index', views.messages_index, name='mess_index'),
+    path('account_s', views.accountSettings, name='account_s'),
+    path('timer', views.timer, name='timer'),
     
     
     

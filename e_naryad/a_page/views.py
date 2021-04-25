@@ -169,16 +169,19 @@ def contact(request):
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def calendar(request):
     return render(request, 'attendance/calendar.html')
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def gate(request):
     return render(request, 'attendance/gate.html')
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def add_sick(request):
     return render(request, 'attendance/add_sick.html')
 
@@ -222,24 +225,42 @@ def employee(request,pk_test):
     return render(request, 'employee.html', context)
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def flexi_time(request):
     return render(request, 'attendance/flexi_time.html')
 
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def add_holiday(request):
     return render(request, 'attendance/add_holiday.html')
 
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def plan_index(request):
     return render(request, 'plan/plan_index.html')
 
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
 def messages_index(request):
     return render(request, 'messages/mess_index.html')
 
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
+def accountSettings(request):
+    employee=request.user.employee
+    form = EmployeeForm(instance=employee)
+    context={'form':form}
+    return render(request, 'accountSettings.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['employees'])
+def timer(request):
+    return render(request, 'attendance/timer.html')

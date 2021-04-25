@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -26,7 +27,7 @@
           <h3 class="card-title">Временные информации</h3>
         </div>
         <div class="card-body">
-          <a href="#" ><button type="button" class="btn btn-block btn-outline-primary">Общее время на работе</button></a>
+          <a href="{% url 'timer' %}" ><button type="button" class="btn btn-block btn-outline-primary">Общее время на работе</button></a>
           <a href="{% url 'add_sick' %}" ><button type="button" class="btn  btn-block btn-outline-secondary">Добавить больничное время</button></a>
           <a href="{% url 'add_holiday' %}" ><button type="button" class="btn  btn-block btn-outline-success">Добавить отпускное время</button></a>
         </div>

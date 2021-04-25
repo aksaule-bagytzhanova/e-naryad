@@ -51,7 +51,12 @@
       
               <div class="box box-primary mt-3 pl-3 ml-5">
             <div class="box-body box-profile">
-                <img class="profile-user-img img-responsive img-circle" src="{% static 'images/user.jpg' %} " alt="User profile picture" href="#">
+                <img class="profile-user-img img-responsive img-circle" src="{{request.user.employee.profile_pic.url}}" alt="User profile picture" href="#">
+                <div>
+                
+                <a href="{% url 'account_s' %}">{{request.user.employee.username}}</a>
+                
+              </div>
             <!-- /.box-body -->
           </div>
       
