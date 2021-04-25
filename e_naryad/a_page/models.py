@@ -23,7 +23,7 @@ class Employee_Time(models.Model):
     sick_h = models.BigIntegerField(null=True)
 
     def __str__(self):
-        return self.username  
+        return "%s" % (self.username)
 
 class Organization(models.Model):
     name = models.CharField(max_length=200)

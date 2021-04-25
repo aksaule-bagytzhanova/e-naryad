@@ -1,9 +1,10 @@
-from django.contrib.auth.forms import UserCreationForm
-from django.db.models import fields
 from django.forms import ModelForm, widgets
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.db.models import fields
 from .models import Employee, Order
 from django.core import validators
-from django.contrib.auth.models import User
+
 from django import forms
 
 class EmployeeForm(ModelForm):

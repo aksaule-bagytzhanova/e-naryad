@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect
 from django.urls import path
 from .models import *
+from django.contrib.auth.models import Group
 from .forms import OrderForm, EmployeeForm
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .decorators import allowed_users, unauthenticated_user
+from .decorators import allowed_users, unauthenticated_user, admin_only
 
 
 # Create your views here.
@@ -156,21 +157,32 @@ def passport_pg(request):
 def passport_substation(request):
     return render(request, 'passport/passport_substation.html')
 
+
+@login_required(login_url='login')
 def passport_uts(request):
     return render(request, 'passport/passport_uts.html')
 
+
+@login_required(login_url='login')
 def contact(request):
     return render(request, 'attendance/contact.html')
 
+
+@login_required(login_url='login')
 def calendar(request):
     return render(request, 'attendance/calendar.html')
 
+
+@login_required(login_url='login')
 def gate(request):
     return render(request, 'attendance/gate.html')
 
+
+@login_required(login_url='login')
 def add_sick(request):
     return render(request, 'attendance/add_sick.html')
 
+@unauthenticated_user
 def loginPage(request):
     if request.method == 'POST':
         username=request.POST.get('username')
@@ -183,10 +195,9 @@ def loginPage(request):
             return redirect('enar')
         else:
             messages.info(request, 'Username OR password is incorrect')
-                
-    return render(request, 'login.html')
-    
-@login_required(login_url='login')
+    context ={}          
+    return render(request, 'login.html',context)
+
 
 
 def logOutPage(request):
@@ -194,37 +205,41 @@ def logOutPage(request):
     return redirect('login')
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['admin'])
+def employee_list(request):
+    employee = Employee.objects.all()
+    employee_time = Employee_Time.objects.all()
+    context={'employee':employee, 'employee_time':employee_time}
+    return render(request, 'employee_list.html', context)
 
 
-
-def employee(request):
-    employee = request.user.employee
-    form = EmployeeForm(instance=employee)
-
-    context = {'form':form}
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin'])
+def employee(request,pk_test):
+    employee = Employee.objects.filter(id=pk_test)
+    employee_time = Employee_Time.objects.filter(id=pk_test)
+    context={'employee':employee, 'employee_time':employee_time}
     return render(request, 'employee.html', context)
 
 @login_required(login_url='login')
-
-
 def flexi_time(request):
     return render(request, 'attendance/flexi_time.html')
 
+
+
 @login_required(login_url='login')
-
-
 def add_holiday(request):
     return render(request, 'attendance/add_holiday.html')
 
+
+
 @login_required(login_url='login')
-
-
 def plan_index(request):
     return render(request, 'plan/plan_index.html')
 
+
+
 @login_required(login_url='login')
-
-
 def messages_index(request):
     return render(request, 'messages/mess_index.html')
 

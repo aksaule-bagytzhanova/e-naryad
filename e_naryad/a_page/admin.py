@@ -17,4 +17,5 @@ admin.site.register(An_object)
 admin.site.register(create_e_naryad_table_1)
 admin.site.register(Order)
 admin.site.register(Work_supervisor)
+admin.site.register(Employee_Time)
 

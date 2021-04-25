@@ -114,7 +114,16 @@
               </p>
             </a>
           </li>
-       
+          {% if request.user.is_staff %}
+          <li class="nav-item">
+            <a href="{% url 'employee_list' %}" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Рабочие
+              </p>
+            </a>
+          </li>
+          {% endif %}
           <li class="nav-header">Посещаемость</li>
            <li class="nav-item">
             <a href="{% url 'gate' %}" class="nav-link">
