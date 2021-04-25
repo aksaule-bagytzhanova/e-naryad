@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS Employee_add_holiday(
 
 DROP TABLE IF EXISTS Employee_sick_leave;
 CREATE TABLE IF NOT EXISTS Employee_sick_leave(
-  Employee_id INTEGER NOT NULL ,
+  Username VARCHAR NOT NULL ,
 	start_date  DATETIME NOT NULL   ,
 	end_date  DATETIME  NOT NULL  ,
   FOREIGN KEY (Employee_id)
