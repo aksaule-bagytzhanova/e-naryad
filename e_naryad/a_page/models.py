@@ -117,6 +117,11 @@ class Order(models.Model):
     person_give_naryad =  models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     started_work = models.DateField()
     work_done = models.DateField()
+
+    def __str__(self):
+        return self.number_naryad
+
+
     
 
 
