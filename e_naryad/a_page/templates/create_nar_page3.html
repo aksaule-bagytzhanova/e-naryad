@@ -1,0 +1,116 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Наряд-допуск</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- SELECT2 EXAMPLE -->
+
+      <!-- /.card -->
+      <!-- SELECT2 EXAMPLE -->
+      <div class="card card-light">
+          <div class="card-header">
+            <h3 class="card-title">Разрешение на допуск</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+              <h5 class="text-primary">Разрешение на подготовку рабочих мест и на допуск к работе получил</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Наряд выдал</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Наряд выдал</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>Подпись</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Подпись</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Фамилия</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Фамилия</option>
+                    </select>
+                </div>
+              </div>
+              </div>
+              <h5 class="text-primary">Согласование на выполнение работ в зоне действия другого наряда</h5>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Дата</label>
+                          <input type="date" class="form-control" id="start_date" placeholder="Date">
+                      </div>
+                      <div class="form-group">
+                          <label>Рабочие места подготовлены. Под напряжением остались</label>
+                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 124px; width: 100%;"></textarea>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Согласовано</label>
+                          <select class="form-control select2" style="width:100%;">
+                              <option selected="selected">
+                                  Согласовано
+                              </option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Допускающий</label>
+                          <select class="form-control select2" style="width:100%;">
+                              <option selected="selected">
+                                  Допускающий
+                              </option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Ответсвенный руководитель работ</label>
+                          <select class="form-control select2" style="width:100%;">
+                              <option selected="selected">
+                                  Ответсвенный руководитель работ
+                              </option>
+                          </select>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-light">Отправить на согласование</button>
+              </div>
+          </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

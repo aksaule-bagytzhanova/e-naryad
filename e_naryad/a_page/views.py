@@ -26,17 +26,17 @@ def create_nar_page1(request):
     return render(request, 'create_nar_page1.html')
 
 @login_required(login_url='login')
-def create_nar_page1(request):
-    return render(request, 'create_nar_page1.html')
+def create_nar_page2(request):
+    return render(request, 'create_nar_page2.html')
 
 
 @login_required(login_url='login')
-def create_nar_page1(request):
-    return render(request, 'create_nar_page1.html')
+def create_nar_page3(request):
+    return render(request, 'create_nar_page3.html')
 
 @login_required(login_url='login')
-def create_nar_page1(request):
-    return render(request, 'create_nar_page1.html')
+def create_nar_page4(request):
+    return render(request, 'create_nar_page4.html')
 
 @login_required(login_url='login')
 def mainpage(request):
