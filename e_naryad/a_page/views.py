@@ -25,7 +25,23 @@ def enar(request):
 def create_nar_page1(request):
     return render(request, 'create_nar_page1.html')
 
+@login_required(login_url='login')
+def create_nar_page1(request):
+    return render(request, 'create_nar_page1.html')
 
+
+@login_required(login_url='login')
+def create_nar_page1(request):
+    return render(request, 'create_nar_page1.html')
+
+@login_required(login_url='login')
+def create_nar_page1(request):
+    return render(request, 'create_nar_page1.html')
+
+@login_required(login_url='login')
+def mainpage(request):
+
+    return render(request, 'mainpage.html')
 
 @login_required(login_url='login')
 def open_nar_page1(request):
