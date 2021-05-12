@@ -1,3 +1,4 @@
+from django.db import connection
 from django.shortcuts import render, redirect
 from django.urls import path
 from .models import *
@@ -41,6 +42,9 @@ def close_nar_page1(request):
 @login_required(login_url='login')
 def order_index(request):
     orders = Order.objects.all()
+    print(orders)
+    print(connection.queries)
+    
 
     context={'orders':orders}
     return render(request, 'order/order_index.html', context) 
@@ -256,6 +260,11 @@ def messages_index(request):
 def accountSettings(request):
     employee=request.user.employee
     form = EmployeeForm(instance=employee)
+
+    if request.method == 'POST':
+        form = EmployeeForm(request.POST, request.FILES ,instance=employee)
+        if form.is_valid():
+            form.save()
     context={'form':form}
     return render(request, 'accountSettings.html', context)
 

@@ -119,7 +119,7 @@ class Order(models.Model):
     work_done = models.DateField()
 
     def __str__(self):
-        return self.number_naryad
+        return str(self.number_naryad)
 
 
     
