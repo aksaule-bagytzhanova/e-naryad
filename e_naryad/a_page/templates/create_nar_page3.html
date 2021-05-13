@@ -40,66 +40,65 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Наряд выдал</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Наряд выдал</option>
-                  </select>
+                  <label>Номер наряда</label>
+                  <div class="form-group"> 
+                    {{form.number_naryad}}
+                  </div>
                 </div>
-                <!-- /.form-group -->
                 <div class="form-group">
-                    <label>Подпись</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected">Подпись</option>
-                    </select>
+                  <label>Наряд выдал</label>
+                  <div class="form-group"> 
+                    {{form.enar_give}}
+                  </div>
                 </div>
                 <!-- /.form-group -->
               </div>
-              <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Фамилия</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected">Фамилия</option>
-                    </select>
+                    <label>Подпись</label>
+                    <div class="form-group"> 
+                      {{form.signature_enar_give}}
+                    </div>
                 </div>
               </div>
+                <!-- /.form-group -->
+              
+              <!-- /.col -->
               </div>
               <h5 class="text-primary">Согласование на выполнение работ в зоне действия другого наряда</h5>
               <div class="row">
                   <div class="col-md-6">
                       <div class="form-group">
                           <label>Дата</label>
-                          <input type="date" class="form-control" id="start_date" placeholder="Date">
+                          <div class="form-group"> 
+                            {{form.date_time}}
+                          </div>
                       </div>
                       <div class="form-group">
                           <label>Рабочие места подготовлены. Под напряжением остались</label>
-                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 124px; width: 100%;"></textarea>
+                          <div class="form-group"> 
+                            {{form.workplaces_prepared}}
+                          </div>
                       </div>
                   </div>
                   <div class="col-md-6">
                       <div class="form-group">
                           <label>Согласовано</label>
-                          <select class="form-control select2" style="width:100%;">
-                              <option selected="selected">
-                                  Согласовано
-                              </option>
-                          </select>
+                          <div class="form-group"> 
+                            {{form.agreed}}
+                          </div>
                       </div>
                       <div class="form-group">
                           <label>Допускающий</label>
-                          <select class="form-control select2" style="width:100%;">
-                              <option selected="selected">
-                                  Допускающий
-                              </option>
-                          </select>
+                          <div class="form-group"> 
+                            {{form.admitting}}
+                          </div>
                       </div>
                       <div class="form-group">
                           <label>Ответсвенный руководитель работ</label>
-                          <select class="form-control select2" style="width:100%;">
-                              <option selected="selected">
-                                  Ответсвенный руководитель работ
-                              </option>
-                          </select>
+                          <div class="form-group"> 
+                            {{form.responsible_manager}}
+                          </div>
                       </div>
                   </div>
                   <button type="submit" class="btn btn-light">Отправить на согласование</button>

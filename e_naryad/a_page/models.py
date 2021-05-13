@@ -140,6 +140,23 @@ class сreate_e_naryad_table_2(models.Model):
         return str(self.number_naryad)
 
 
+class create_e_naryad_table_3(models.Model):
+    number_naryad = models.IntegerField()
+    enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    signature_enar_give = models.ImageField(null=True, blank=True)
+    date_time = models.DateField()
+    workplaces_prepared = models.TextField()
+    agreed = models.CharField(max_length=200, null=True)
+    admitting =  models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)
+    responsible_manager = models.CharField(max_length=200, null=True)
+
+    def __str__(self):
+        return str(self.number_naryad)
+
+class create_e_naryad_table_4(models.Model):
+    number_naryad = models.IntegerField()
+    reported = models.CharField(max_length=200, null=True)
+    
     
 
 
