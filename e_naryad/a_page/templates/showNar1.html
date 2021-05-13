@@ -25,36 +25,38 @@
         <div class="card-header">
           <h3 class="card-title">Наряд-допуск для работы в электроустановках</h3>
 
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            
-          </div>
+        
         </div>
         <!-- /.card-header -->
-        <form method="POST" action="" enctype="multipart/form-data">
-          {% csrf_token %}
+    {% for i in showNar %}
         <div class="card-body">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label>Номер наряда</label>
                 <div class="form-group"> 
-                  {{form.number_naryad}}
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.number_naryad}}</option>
+                      </select>
                 </div>
               </div>
               <div class="form-group">
                 <label>Организация</label>
-                <div class="form-group"> 
-                  {{form.organization}}
+                <div class="form-group">
+                <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected"> {{i.organization}}</option>
+                </select> 
+                 
                 </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>Участок</label>
                   <div class="form-group"> 
-                    {{form.plot}}
+                    
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.plot}}</option>
+                    </select> 
                   </div>
               </div>
               <!-- /.form-group -->
@@ -64,14 +66,20 @@
               <div class="form-group">
                   <label>Подразделение</label>
                   <div class="form-group"> 
-                    {{form.subdivision}}
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.subdivision}}</option>
+                    </select> 
+                    
                   </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>Руководителю работ</label>
                   <div class="form-group"> 
-                    {{form.work_manager}}
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected"> {{i.work_manager}}</option>
+                    </select>  
+                   
                   </div>
               </div>
               <!-- /.form-group -->
@@ -81,14 +89,20 @@
               <div class="form-group">
                   <label>Допускающему</label>
                   <div class="form-group"> 
-                    {{form.admitting}}
+                    
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.admitting}}</option>
+                    </select>  
                   </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>С членами бригад</label>
-                  <div class="form-group"> 
-                    {{form.team_members}}
+                  <div class="form-group">
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.team_members}}</option>
+                    </select>   
+                    
                   </div>
               </div>
               <!-- /.form-group -->
@@ -97,15 +111,21 @@
             <div class="col-md-6">
               <div class="form-group">
                   <label>Производителю работ</label>
-                  <div class="form-group"> 
-                    {{form.manufacturer}}
+                  <div class="form-group">
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected"> {{i.manufacturer}}</option>
+                    </select>  
+                   
                   </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>Наблюдающему</label>
                   <div class="form-group"> 
-                    {{form.observer}}
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.observer}}</option>
+                    </select>  
+                    
                   </div>
               </div>
               <!-- /.form-group -->
@@ -114,14 +134,20 @@
                   <div class="form-group">
                   <label>Категория работ</label>
                   <div class="form-group"> 
-                    {{form.category_of_work}}
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected"> {{i.category_of_work}}</option>
+                    </select>  
+                   
                   </div>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                       <label>Время аварийной готовности</label>
-
-                      {{form.emergency_preparedness_time}}
+                     
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected"> {{i.emergency_preparedness_time}}</option>
+                    </select> 
+                      
 
                   </div>
               </div>
@@ -129,14 +155,20 @@
                   <div class="form-group">
                   <label>Поручается</label>
                   <div class="form-group"> 
-                    {{form.entrusted}}
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.entrusted}}</option>
+                    </select>  
+                    
                   </div>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                       <label>Объект</label>
-                      <div class="form-group"> 
-                        {{form.object}}
+                      <div class="form-group">
+                        <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">{{i.object}}</option>
+                        </select>   
+                        
                       </div>
                   </div>
               </div>
@@ -144,14 +176,20 @@
               <div class="col-md-12">
                   <div class="form-group">
                       <label>Работу начать</label>
-                      {{form.start_work}}
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.start_work}}</option>
+                    </select> 
+                      
 
                   </div>
               </div>
             <div class="col-md-12">
               <div class="form-group">
                   <label>Работу закончить</label>
-                  {{form.finish_work}}
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">{{i.finish_work}}</option>
+                </select> 
+                  
 
               </div>
           </div>
@@ -162,26 +200,35 @@
                       <div class="form-group">
                           <label>Наименования электроустановок, в которых нужно провести отключения и установить заземление</label>
                           <div class="form-group"> 
-                            {{form.name_electrical}}
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">{{i.name_electrical}}</option>
+                            </select> 
+                            
                           </div>
                       </div>
                       <div class="form-group">
                           <label>Что должно быть отключено и где заземлено</label>
                           <div class="form-group"> 
-                            {{form.disconnected_where}}
+                            <textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"> {{i.disconnected_where}}</textarea>
+
+                           
                           </div>
                         </div>
                       <div class="form-group">
                           <label>Отдельные указания</label>
                           <div class="form-group"> 
-                            {{form.separate_instructions}}
+                            <textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;">{{i.separate_instructions}}</textarea>
+
                           </div>
                       </div>
                       
                       <div class="form-group">
                         <label>Наряд выдал</label>
                         <div class="form-group"> 
-                          {{form.enar_give}}
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">{{i.enar_give}}</option>
+                            </select> 
+                          
                         </div>
                     </div>
                   </div>
@@ -189,10 +236,15 @@
                   <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                     <div class="form-group">
                         <label for="exampleInputFile">Подпись</label>
-                        <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
+                        <!-- <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a> -->
                         
                           <div class="form-group">
-                            {{form.signature}}
+                            {% if i.signature.url != Null %}
+                            
+                            <td><span class="badge bg-success">Подпись есть</span></td>
+                            {% else %}
+                            <td><span class="badge bg-danger">Подписи нет</span></td>
+                            {% endif %}
                         </div>
                         <!-- <div class="input-group-append">
                             <span class="input-group-text">Upload</span>
@@ -206,7 +258,11 @@
                           <label for="exampleInputFile">Открыть однолинейную схему</label>
                           
                             <div class="form-group">
-                              {{form.single_line_diagram}}
+                                {% if i.single_line_diagram.url != Null %}
+                                <img class="profile-pic" src="{{i.single_line_diagram.url}}" > 
+
+                              {% endif %}
+
                           </div>
                           <!-- <div class="input-group-append">
                               <span class="input-group-text">Upload</span>
@@ -214,12 +270,13 @@
                       
                   </div>
               </div>
-              <button type="submit" class="btn btn-info">Отправить на согласование</button>
+             
           </div>
         </div>
       </div>
         </div>
-        </form>
+        {% endfor %}
+   
   </div>
       <!-- /.card -->
 

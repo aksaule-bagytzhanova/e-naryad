@@ -38,7 +38,7 @@ def create_nar_page1(request):
 
     if request.method == 'POST':
         # print('Printing POST: ', request.POST)
-        form = CreateNar1Form(request.POST)
+        form = CreateNar1Form(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('enar')
@@ -55,7 +55,7 @@ def create_nar_page2(request):
 
     if request.method == 'POST':
         # print('Printing POST: ', request.POST)
-        form = CreateNar2Form(request.POST)
+        form = CreateNar2Form(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('enar')
@@ -71,7 +71,7 @@ def create_nar_page3(request):
 
     if request.method == 'POST':
         # print('Printing POST: ', request.POST)
-        form = CreateNar3Form(request.POST)
+        form = CreateNar3Form(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('enar')
@@ -86,7 +86,7 @@ def create_nar_page4(request):
 
     if request.method == 'POST':
         # print('Printing POST: ', request.POST)
-        form = CreateNar4Form(request.POST)
+        form = CreateNar4Form(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('enar')
@@ -108,8 +108,12 @@ def mainpage(request):
 @login_required(login_url='login')
 def open_nar_page1(request):
 
-    openNar = сreate_e_naryad_table_1.objects.all()
-    context={'openNar':openNar}
+    openNar1 = сreate_e_naryad_table_1.objects.all()
+    openNar2 = сreate_e_naryad_table_1.objects.all()
+    openNar3 = сreate_e_naryad_table_1.objects.all()
+    openNar4 = сreate_e_naryad_table_1.objects.all()
+    
+    context={'openNar1':openNar1, 'openNar2':openNar2, 'openNar3':openNar3, 'openNar4':openNar4}
     
     return render(request, 'open_nar_page1.html', context)
 
@@ -120,16 +124,17 @@ def close_nar_page1(request):
     return render(request, 'close_nar_page1.html')
 
 def show_nar_page1(request, pk):
-    showNar = сreate_e_naryad_table_1.objects.get(id=pk)
-    form = CreateNar1Form(instance=showNar)
+    showNar = сreate_e_naryad_table_1.objects.filter(id=pk)
+    
 
-    context={'form':form}
+    context={'showNar':showNar}
 
-    return render(request, 'create_nar_page1.html', context)
+    return render(request, 'showNar1.html', context)
 
 
 @login_required(login_url='login')
 def order_index(request):
+
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM a_page_order")
     orders = dictfetchall(cursor)

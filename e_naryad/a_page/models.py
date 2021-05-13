@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Employee(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE, blank=True)
     username = models.CharField(max_length=200, null=True)
     password = models.CharField(max_length=200, null=True)
     name = models.CharField(max_length=200, null=True)
     surname = models.CharField(max_length=200, null=True)
-    profile_pic = models.ImageField(null=True, blank=True)
+    profile_pic = models.ImageField(default='a.jpg',null=True, blank=True)
     position = models.CharField(max_length=200, null=True)
 
     def __str__(self):
@@ -117,6 +117,7 @@ class сreate_e_naryad_table_1(models.Model):
     
 class Order(models.Model):
     number_naryad = models.IntegerField()
+    organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
     technical_activities = models.CharField(max_length=200, null=True)
     place_name_work = models.CharField(max_length=200, null=True)
     work_supervisor = models.ForeignKey(Work_supervisor, null=True, on_delete=models.SET_NULL)
@@ -131,6 +132,7 @@ class Order(models.Model):
 
 class сreate_e_naryad_table_2(models.Model):
     number_naryad = models.IntegerField()
+    organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
     enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     signature_enar_give = models.ImageField(null=True, blank=True)
     responsible_manager = models.CharField(max_length=200, null=True)
@@ -142,6 +144,7 @@ class сreate_e_naryad_table_2(models.Model):
 
 class create_e_naryad_table_3(models.Model):
     number_naryad = models.IntegerField()
+    organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
     enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     signature_enar_give = models.ImageField(null=True, blank=True)
     date_time = models.DateField()
@@ -156,6 +159,7 @@ class create_e_naryad_table_3(models.Model):
 class create_e_naryad_table_4(models.Model):
     number_naryad = models.IntegerField()
     reported = models.CharField(max_length=200, null=True)
+    organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
     manufacturer = models.ForeignKey(Manufacturer, null=True, on_delete=models.SET_NULL)
     responsible_manager = models.CharField(max_length=200, null=True)
     admitting =  models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)

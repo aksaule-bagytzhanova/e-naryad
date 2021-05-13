@@ -61,9 +61,10 @@ class CreateNar1Form(ModelForm):
 class CreateNar2Form(ModelForm):
     class Meta:
         model = сreate_e_naryad_table_2
-        fields = ['number_naryad', 'enar_give', 'signature_enar_give', 'responsible_manager', 'signature_responsible_manager']
+        fields = ['number_naryad', 'enar_give', 'signature_enar_give', 'responsible_manager', 'signature_responsible_manager', 'organization']
         widgets = {
             'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
+            'organization': widgets.Select(attrs={'class':'form-control select2'}),
             'enar_give': widgets.Select(attrs={'class':'form-control select2'}),
             'signature_enar_give': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
             'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
@@ -74,7 +75,7 @@ class CreateNar2Form(ModelForm):
 class CreateNar3Form(ModelForm):
     class Meta:
         model = create_e_naryad_table_3
-        fields = ['number_naryad', 'enar_give', 'signature_enar_give', 'date_time', 'workplaces_prepared', 'agreed', 'admitting', 'responsible_manager']
+        fields = ['number_naryad', 'enar_give', 'signature_enar_give', 'date_time', 'workplaces_prepared', 'agreed', 'admitting', 'responsible_manager', 'organization']
         widgets = {
             'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
             'enar_give': widgets.Select(attrs={'class':'form-control select2'}),
@@ -83,13 +84,14 @@ class CreateNar3Form(ModelForm):
             'workplaces_prepared': widgets.Textarea(attrs={'class':'form-control', 'rows':'3', 'style':'margin-top: 0px; margin-bottom: 0px; height: 126px; width: 100%;'}),
             'agreed': widgets.TextInput(attrs={'class':'form-control'}),
             'admitting': widgets.Select(attrs={'class':'form-control select2'}),
-            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'})
+            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
+            'organization': widgets.Select(attrs={'class':'form-control select2'})
         }
 
 class CreateNar4Form(ModelForm):
     class Meta:
         model = create_e_naryad_table_4
-        fields = ['number_naryad', 'reported', 'manufacturer', 'responsible_manager', 'admitting', 'signature_manufacturer', 'signature_responsible_manager', 'signature_admitting']
+        fields = ['number_naryad', 'reported', 'manufacturer', 'responsible_manager', 'admitting', 'signature_manufacturer', 'signature_responsible_manager', 'signature_admitting', 'organization']
         widgets = {
             'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
             'reported': widgets.TextInput(attrs={'class':'form-control'}),
@@ -99,4 +101,5 @@ class CreateNar4Form(ModelForm):
             'signature_manufacturer':widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
             'signature_responsible_manager': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
             'signature_admitting': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
+            'organization': widgets.Select(attrs={'class':'form-control select2'})
         }
