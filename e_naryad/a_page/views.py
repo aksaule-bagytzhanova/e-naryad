@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import path
 from .models import *
 from django.contrib.auth.models import Group
-from .forms import OrderForm, EmployeeForm, CreateNar1Form
+from .forms import OrderForm, EmployeeForm, CreateNar1Form, CreateNar2Form
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -50,7 +50,19 @@ def create_nar_page1(request):
 
 @login_required(login_url='login')
 def create_nar_page2(request):
-    return render(request, 'create_nar_page2.html')
+
+    form = CreateNar2Form()
+
+    if request.method == 'POST':
+        # print('Printing POST: ', request.POST)
+        form = CreateNar2Form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('enar')
+
+
+    context={'form':form}
+    return render(request, 'create_nar_page2.html', context)
 
 
 @login_required(login_url='login')

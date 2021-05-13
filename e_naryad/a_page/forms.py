@@ -2,7 +2,7 @@ from django.forms import ModelForm, widgets
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.db.models import fields
-from .models import Employee, Order, сreate_e_naryad_table_1
+from .models import Employee, Order, сreate_e_naryad_table_1, сreate_e_naryad_table_2
 from django.core import validators
 
 from django import forms
@@ -55,7 +55,19 @@ class CreateNar1Form(ModelForm):
             'start_work': widgets.DateInput(attrs={'class':'form-control' ,'id':"start_date", 'placeholder':"Date", 'type':"date"}),
             'disconnected_where': widgets.Textarea(attrs={'class':'form-control', 'rows':'3', 'style':'margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;'}),
             'enar_give': widgets.Select(attrs={'class':'form-control select2'})
-
-            
-
         }
+
+
+class CreateNar2Form(ModelForm):
+    class Meta:
+        model = сreate_e_naryad_table_2
+        fields = ['number_naryad', 'enar_give', 'signature_enar_give', 'responsible_manager', 'signature_responsible_manager']
+        widgets = {
+            'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
+            'enar_give': widgets.Select(attrs={'class':'form-control select2'}),
+            'signature_enar_give': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
+            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
+            'signature_responsible_manager': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'})
+            
+        }
+

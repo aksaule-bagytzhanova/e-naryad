@@ -39,17 +39,23 @@
               <div class="col-md-6">
                   <h5>Инструктаж провел</h5>
                   <div class="form-group">
+                    <label>Номер наряда</label>
+                    <div class="form-group"> 
+                      {{form.number_naryad}}
+                    </div>
+                  </div>
+                  <div class="form-group">
                       <label>Лицо выдавшее наряд</label>
-                      <select class="form-control select2" style="width: 100%;">
-                          <option selected="selected">Лицо выдавшее наряд</option>
-                      </select>
+                      <div class="form-group"> 
+                        {{form.enar_give}}
+                      </div>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                       <label>Подпись (фамилия, инициалы)</label>
-                      <select class="form-control select2" style="width: 100%;">
-                          <option selected="selected">Подпись (фамилия, инициалы)</option>
-                      </select>
+                      <div class="form-group">
+                        {{form.signature_enar_give}}
+                    </div>
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -58,16 +64,16 @@
                   <div class="form-group">
                       <h5>Инструктаж получил</h5>
                       <label>Ответственный руководитель работ</label>
-                      <select class="form-control select2" style="width: 100%;">
-                        <option selected="selected">Ответственный руководитель работ</option>
-                      </select>
+                      <div class="form-group"> 
+                        {{form.responsible_manager}}
+                      </div>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                       <label>Подпись (фамилия, инициалы)</label>
-                      <select class="form-control select2" style="width: 100%;">
-                        <option selected="selected">Подпись (фамилия, инициалы)</option>
-                      </select>
+                      <div class="form-group">
+                        {{form.signature_enar_give}}
+                    </div>
                   </div>
                   <!-- /.form-group -->
               </div> 

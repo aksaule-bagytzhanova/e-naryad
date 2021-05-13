@@ -110,6 +110,9 @@ class сreate_e_naryad_table_1(models.Model):
     start_work = models.DateField()
     disconnected_where = models.TextField()
     enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return str(self.number_naryad)
     
     
 class Order(models.Model):
@@ -121,6 +124,17 @@ class Order(models.Model):
     person_give_naryad =  models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     started_work = models.DateField()
     work_done = models.DateField()
+
+    def __str__(self):
+        return str(self.number_naryad)
+
+
+class сreate_e_naryad_table_2(models.Model):
+    number_naryad = models.IntegerField()
+    enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    signature_enar_give = models.ImageField(null=True, blank=True)
+    responsible_manager = models.CharField(max_length=200, null=True)
+    signature_responsible_manager = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return str(self.number_naryad)
