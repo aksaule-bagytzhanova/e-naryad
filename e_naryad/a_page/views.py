@@ -3,16 +3,27 @@ from django.shortcuts import render, redirect
 from django.urls import path
 from .models import *
 from django.contrib.auth.models import Group
-from .forms import OrderForm, EmployeeForm
+from .forms import OrderForm, EmployeeForm, CreateNar1Form
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .decorators import allowed_users, unauthenticated_user, admin_only
-
+from django.db import connection
+from django.db.models import Q
+from collections import namedtuple
 
 # Create your views here.
+
+def dictfetchall(cursor):
+    "Return all rows from a cursor as a dict"
+    columns = [col[0] for col in cursor.description]
+    return [
+        dict(zip(columns, row))
+        for row in cursor.fetchall()
+    ]
+
 
 @login_required(login_url='login')
 def enar(request):
@@ -23,7 +34,19 @@ def enar(request):
 
 @login_required(login_url='login')
 def create_nar_page1(request):
-    return render(request, 'create_nar_page1.html')
+    form = CreateNar1Form()
+
+    if request.method == 'POST':
+        # print('Printing POST: ', request.POST)
+        form = CreateNar1Form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('enar')
+
+
+    context={'form':form}
+
+    return render(request, 'create_nar_page1.html', context)
 
 @login_required(login_url='login')
 def create_nar_page2(request):
@@ -57,9 +80,15 @@ def close_nar_page1(request):
 
 @login_required(login_url='login')
 def order_index(request):
-    orders = Order.objects.all()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM a_page_order")
+    orders = dictfetchall(cursor)
+
     print(orders)
     print(connection.queries)
+    # orders = Order.objects.all()
+    # print(orders)
+
     
 
     context={'orders':orders}
