@@ -33,6 +33,8 @@
           </div>
         </div>
         <!-- /.card-header -->
+        <form method="POST" action="" >
+          {% csrf_token %}
         <div class="card-body">
           <div class="row">
             <div class="col-md-6">
@@ -187,6 +189,7 @@
                   <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                     <div class="form-group">
                         <label for="exampleInputFile">Подпись</label>
+                        <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
                         
                           <div class="form-group">
                             {{form.signature}}
@@ -216,6 +219,7 @@
         </div>
       </div>
         </div>
+        </form>
   </div>
       <!-- /.card -->
 

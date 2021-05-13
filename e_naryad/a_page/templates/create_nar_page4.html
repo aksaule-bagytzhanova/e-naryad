@@ -33,6 +33,8 @@
             
           </div>
         </div>
+        <form method="POST" action="" >
+          {% csrf_token %}
         <!-- /.card-header -->
         <div class="card-body">
           <div class="row">
@@ -62,7 +64,8 @@
               </div>
               <!-- /.form-group -->
               <div class="form-group">
-                  <label>подпись (фамилия, инициалы)</label>
+                  <label>Подпись</label>
+                  <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
                   <div class="form-group"> 
                     {{form.signature_manufacturer}}
                   </div>
@@ -89,14 +92,16 @@
 
             <div class="col-md-6">
               <div class="form-group">
-                  <label>подпись (фамилия, инициалы)</label>
+                  <label>Подпись</label>
+                  <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
                   <div class="form-group"> 
                     {{form.signature_responsible_manager}}
                   </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
-                  <label>подпись (фамилия, инициалы)</label>
+                  <label>Подпись</label>
+                  <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
                   <div class="form-group"> 
                     {{form.signature_admitting}}
                   </div>
@@ -106,6 +111,8 @@
             <button type="submit" class="btn btn-dark">Отправить в архив</button>
         </div>  
     </div>
+    </form>
+  
     </div>
 
 

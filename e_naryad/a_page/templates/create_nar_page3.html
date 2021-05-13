@@ -35,6 +35,8 @@
             </div>
           </div>
           <!-- /.card-header -->
+          <form method="POST" action="" >
+            {% csrf_token %}
           <div class="card-body">
               <h5 class="text-primary">Разрешение на подготовку рабочих мест и на допуск к работе получил</h5>
             <div class="row">
@@ -56,6 +58,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Подпись</label>
+                    <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
                     <div class="form-group"> 
                       {{form.signature_enar_give}}
                     </div>
@@ -104,6 +107,7 @@
                   <button type="submit" class="btn btn-light">Отправить на согласование</button>
               </div>
           </div>
+          </form>
       </div>
 
 

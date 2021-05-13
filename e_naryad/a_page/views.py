@@ -96,13 +96,22 @@ def create_nar_page4(request):
     return render(request, 'create_nar_page4.html', context)
 
 @login_required(login_url='login')
+def archive(request):
+
+    return render(request, 'archive.html')
+
+@login_required(login_url='login')
 def mainpage(request):
 
     return render(request, 'mainpage.html')
 
 @login_required(login_url='login')
 def open_nar_page1(request):
-    return render(request, 'open_nar_page1.html')
+
+    openNar = сreate_e_naryad_table_1.objects.all()
+    context={'openNar':openNar}
+    
+    return render(request, 'open_nar_page1.html', context)
 
 
 
@@ -110,6 +119,13 @@ def open_nar_page1(request):
 def close_nar_page1(request):
     return render(request, 'close_nar_page1.html')
 
+def show_nar_page1(request, pk):
+    showNar = сreate_e_naryad_table_1.objects.get(id=pk)
+    form = CreateNar1Form(instance=showNar)
+
+    context={'form':form}
+
+    return render(request, 'create_nar_page1.html', context)
 
 
 @login_required(login_url='login')
