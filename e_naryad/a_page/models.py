@@ -156,7 +156,14 @@ class create_e_naryad_table_3(models.Model):
 class create_e_naryad_table_4(models.Model):
     number_naryad = models.IntegerField()
     reported = models.CharField(max_length=200, null=True)
+    manufacturer = models.ForeignKey(Manufacturer, null=True, on_delete=models.SET_NULL)
+    responsible_manager = models.CharField(max_length=200, null=True)
+    admitting =  models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)
+    signature_manufacturer = models.ImageField(null=True, blank=True)
+    signature_responsible_manager = models.ImageField(null=True, blank=True)
+    signature_admitting = models.ImageField(null=True, blank=True)
     
+
     
 
 

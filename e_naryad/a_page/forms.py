@@ -2,7 +2,7 @@ from django.forms import ModelForm, widgets
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.db.models import fields
-from .models import Employee, Order, сreate_e_naryad_table_1, сreate_e_naryad_table_2, create_e_naryad_table_3
+from .models import Employee, Order, сreate_e_naryad_table_1, сreate_e_naryad_table_2, create_e_naryad_table_3, create_e_naryad_table_4
 from django.core import validators
 
 from django import forms
@@ -84,4 +84,19 @@ class CreateNar3Form(ModelForm):
             'agreed': widgets.TextInput(attrs={'class':'form-control'}),
             'admitting': widgets.Select(attrs={'class':'form-control select2'}),
             'responsible_manager': widgets.TextInput(attrs={'class':'form-control'})
+        }
+
+class CreateNar4Form(ModelForm):
+    class Meta:
+        model = create_e_naryad_table_4
+        fields = ['number_naryad', 'reported', 'manufacturer', 'responsible_manager', 'admitting', 'signature_manufacturer', 'signature_responsible_manager', 'signature_admitting']
+        widgets = {
+            'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
+            'reported': widgets.TextInput(attrs={'class':'form-control'}),
+            'manufacturer': widgets.Select(attrs={'class':'form-control select2'}),
+            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
+            'admitting': widgets.Select(attrs={'class':'form-control select2'}),
+            'signature_manufacturer':widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
+            'signature_responsible_manager': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
+            'signature_admitting': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
         }

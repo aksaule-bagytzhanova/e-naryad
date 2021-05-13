@@ -39,33 +39,33 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label>Сообщено (кому)</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Сообщено (кому)</option>
-                </select>
+                <div class="form-group"> 
+                  {{form.reported}}
+                </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>Производитель работ (наблюдающий)</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Производитель работ (наблюдающий)</option>
-                  </select>
+                  <div class="form-group"> 
+                    {{form.manufacturer}}
+                  </div>
               </div>
               <!-- /.form-group -->
             </div>
             <!-- /.col -->
             <div class="col-md-6">
               <div class="form-group">
-                  <label>(фамилия, инициалы)</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">(фамилия, инициалы)</option>
-                  </select>
+                <label>Номер наряда</label>
+                <div class="form-group"> 
+                  {{form.number_naryad}}
+                </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>подпись (фамилия, инициалы)</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">подпись (фамилия, инициалы)</option>
-                  </select>
+                  <div class="form-group"> 
+                    {{form.signature_manufacturer}}
+                  </div>
               </div>
               <!-- /.form-group -->
             </div>
@@ -73,16 +73,16 @@
             <div class="col-md-6">
               <div class="form-group">
                   <label>Ответственный руководитель работ</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Ответственный руководитель работ</option>
-                  </select>
+                  <div class="form-group"> 
+                    {{form.responsible_manager}}
+                  </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>Допускающий</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Допускающий</option>
-                  </select>
+                  <div class="form-group"> 
+                    {{form.admitting}}
+                  </div>
               </div>
               <!-- /.form-group -->
             </div>
@@ -90,16 +90,16 @@
             <div class="col-md-6">
               <div class="form-group">
                   <label>подпись (фамилия, инициалы)</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">подпись (фамилия, инициалы)</option>
-                  </select>
+                  <div class="form-group"> 
+                    {{form.signature_responsible_manager}}
+                  </div>
               </div>
               <!-- /.form-group -->
               <div class="form-group">
                   <label>подпись (фамилия, инициалы)</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">подпись (фамилия, инициалы)</option>
-                  </select>
+                  <div class="form-group"> 
+                    {{form.signature_admitting}}
+                  </div>
               </div>
               <!-- /.form-group -->
             </div>
