@@ -28,7 +28,7 @@
                 </thead>
                 <tbody>
                   {% for i in openNar1 %}
-
+                  
 
                   <tr>
                     <td>{{i.number_naryad}}</td>
@@ -43,6 +43,56 @@
                   </tr>
                   {% endfor %}
 
+                  {% for i in openNar2 %}
+                  
+
+                  <tr>
+                    <td>{{i.number_naryad}}</td>
+                    <td>{{i.organization}}</td>
+                    <td>{{i.responsible_manager}}</td>
+                    {% if i.signature.url != Null %}
+                    <td><span class="badge bg-success">Подпись есть</span></td>
+                    {% else %}
+                    <td><span class="badge bg-danger">Подписи нет</span></td>
+                    {% endif %}
+                    <td><a href="{% url 'showNar2' i.id %}" class="btn btn-primary">Посмотреть</a></td>
+                  </tr>
+                  {% endfor %}
+
+
+                  {% for i in openNar3 %}
+                  
+
+                  <tr>
+                    <td>{{i.number_naryad}}</td>
+                    <td>{{i.organization}}</td>
+                    <td>{{i.responsible_manager}}</td>
+                    {% if i.signature.url != Null %}
+                    <td><span class="badge bg-success">Подпись есть</span></td>
+                    {% else %}
+                    <td><span class="badge bg-danger">Подписи нет</span></td>
+                    {% endif %}
+                    <td><a href="{% url 'showNar3' i.id %}" class="btn btn-primary">Посмотреть</a></td>
+                  </tr>
+                  {% endfor %}
+
+
+                  {% for i in openNar4 %}
+                  
+
+                  <tr>
+                    <td>{{i.number_naryad}}</td>
+                    <td>{{i.organization}}</td>
+                    <td>{{i.responsible_manager}}</td>
+                    {% if i.signature.url != Null %}
+                    <td><span class="badge bg-success">Подпись есть</span></td>
+                    {% else %}
+                    <td><span class="badge bg-danger">Подписи нет</span></td>
+                    {% endif %}
+                    <td><a href="{% url 'showNar4' i.id %}" class="btn btn-primary">Посмотреть</a></td>
+                  </tr>
+                  {% endfor %}
+                  
                   
                 </tbody>
               </table>

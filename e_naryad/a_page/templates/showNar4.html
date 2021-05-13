@@ -1,0 +1,160 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Наряд-допуск</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+
+        
+      <div class="card card-dark">
+        <div class="card-header">
+          <h3 class="card-title">Работа полностью закончена, бригада удалена, заземления, установленные бригадой, сняты</h3>
+
+          <div class="card-tools">
+            
+            
+          </div>
+        </div>
+        {% for i in showNar %}
+        <!-- /.card-header -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Номер наряда</label>
+                <div class="form-group"> 
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.number_naryad}}</option>
+                      </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Сообщено (кому)</label>
+                <div class="form-group"> 
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.reported}}</option>
+                      </select>
+                </div>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Производитель работ (наблюдающий)</label>
+                  <div class="form-group"> 
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.manufacturer}}</option>
+                      </select>
+            
+                  </div>
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-6">
+              
+              <div class="form-group">
+                <label>Организация</label>
+                <div class="form-group">
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.organization}}</option>
+                    </select> 
+                  </div>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Подпись</label>
+                  <!-- <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a> -->
+                  <div class="form-group">
+                    {% if i.signature_manufacturer.url != Null %}
+                    
+                    <td><span class="badge bg-success">Подпись есть</span></td>
+                    {% else %}
+                    <td><span class="badge bg-danger">Подписи нет</span></td>
+                    {% endif %}
+                </div>
+
+                  
+              </div>
+              <!-- /.form-group -->
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                  <label>Ответственный руководитель работ</label>
+                  <div class="form-group">
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.responsible_manager}}</option>
+                    </select>
+                </div>
+        
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Допускающий</label>
+                  <div class="form-group"> 
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.admitting}}</option>
+                    </select>
+                  </div>
+              </div>
+              <!-- /.form-group -->
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                  <label>Подпись</label>
+                  <!-- <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a> -->
+                  <div class="form-group">
+                    {% if i.signature_responsible_manager.url != Null %}
+                    
+                    <td><span class="badge bg-success">Подпись есть</span></td>
+                    {% else %}
+                    <td><span class="badge bg-danger">Подписи нет</span></td>
+                    {% endif %}
+                </div>
+
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Подпись</label>
+                  <!-- <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a> -->
+                  <div class="form-group">
+                    {% if i.signature_admitting.url != Null %}
+                    
+                    <td><span class="badge bg-success">Подпись есть</span></td>
+                    {% else %}
+                    <td><span class="badge bg-danger">Подписи нет</span></td>
+                    {% endif %}
+                </div>
+
+              </div>
+              <!-- /.form-group -->
+            </div>
+            
+        </div>  
+    </div>
+    
+  {% endfor %}
+    </div>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

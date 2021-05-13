@@ -27,41 +27,54 @@
           <div class="card-header">
             <h3 class="card-title">Регистрация целевого инструктажа при первичном допуске</h3>
             <div class="card-tools">
-              
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
               
             </div>
           </div>
           <!-- /.card-header -->
-          <form method="POST" action="" enctype="multipart/form-data">
-            {% csrf_token %}
+          {% for i in showNar %}
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Организация</label>
-                  <div class="form-group"> 
-                    {{form.organization}}
+                  <div class="form-group">
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">{{i.organization}}</option>
+                    </select> 
                   </div>
                 </div>
                   <h5>Инструктаж провел</h5>
                   <div class="form-group">
                     <label>Номер наряда</label>
                     <div class="form-group"> 
-                      {{form.number_naryad}}
+                        <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">{{i.number_naryad}}</option>
+                          </select>
                     </div>
                   </div>
                   <div class="form-group">
                       <label>Лицо выдавшее наряд</label>
                       <div class="form-group"> 
-                        {{form.enar_give}}
+                        
+                        <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">{{i.enar_give}}</option>
+                        </select>
                       </div>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                       <label>Подпись (фамилия, инициалы)</label>
-                      <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
+                      
                       <div class="form-group">
-                        {{form.signature_enar_give}}
+                        {% if i.signature_enar_give.url != Null %}
+                        
+                        <td><span class="badge bg-success">Подпись есть</span></td>
+                        {% else %}
+                        <td><span class="badge bg-danger">Подписи нет</span></td>
+                        {% endif %}
                     </div>
                   </div>
                 <!-- /.form-group -->
@@ -72,25 +85,31 @@
                       <h5>Инструктаж получил</h5>
                       <label>Ответственный руководитель работ</label>
                       <div class="form-group"> 
-                        {{form.responsible_manager}}
+                        <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">{{i.responsible_manager}}</option>
+                        </select>
+                        
                       </div>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                       <label>Подпись (фамилия, инициалы)</label>
-                      <a href="http://szimek.github.io/signature_pad/" target="_blank">Распишитесь тут</a>
+                      
                       <div class="form-group">
-                        {{form.signature_responsible_manager}}
+                        {% if i.signature_responsible_manager.url != Null %}
+                        <td><span class="badge bg-success">Подпись есть</span></td>
+                        {% else %}
+                        <td><span class="badge bg-danger">Подписи нет</span></td>
+                        {% endif %}
                     </div>
+                      
                   </div>
                   <!-- /.form-group -->
               </div> 
-              <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                  <button type="submit" class="btn btn-secondary">Сохранить</button>
-              </div>      
+                
             </div> 
           </div>
-          </form>
+          {% endfor %}
       </div>
       <!-- /.card -->
       <!-- SELECT2 EXAMPLE -->

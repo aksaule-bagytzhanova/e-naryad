@@ -134,9 +134,9 @@ def mainpage(request):
 def open_nar_page1(request):
 
     openNar1 = сreate_e_naryad_table_1.objects.all()
-    openNar2 = сreate_e_naryad_table_1.objects.all()
-    openNar3 = сreate_e_naryad_table_1.objects.all()
-    openNar4 = сreate_e_naryad_table_1.objects.all()
+    openNar2 = сreate_e_naryad_table_2.objects.all()
+    openNar3 = create_e_naryad_table_3.objects.all()
+    openNar4 = create_e_naryad_table_4.objects.all()
     
     context={'openNar1':openNar1, 'openNar2':openNar2, 'openNar3':openNar3, 'openNar4':openNar4}
     
@@ -148,6 +148,7 @@ def open_nar_page1(request):
 def close_nar_page1(request):
     return render(request, 'close_nar_page1.html')
 
+@login_required(login_url='login')
 def show_nar_page1(request, pk):
     showNar = сreate_e_naryad_table_1.objects.filter(id=pk)
     
@@ -156,6 +157,34 @@ def show_nar_page1(request, pk):
 
     return render(request, 'showNar1.html', context)
 
+@login_required(login_url='login')
+def show_nar_page2(request, pk):
+    showNar = сreate_e_naryad_table_2.objects.filter(id=pk)
+    
+
+    context={'showNar':showNar}
+
+    return render(request, 'showNar2.html', context)
+
+
+@login_required(login_url='login')
+def show_nar_page3(request, pk):
+    showNar = create_e_naryad_table_3.objects.filter(id=pk)
+    
+
+    context={'showNar':showNar}
+
+    return render(request, 'showNar3.html', context)
+
+
+@login_required(login_url='login')
+def show_nar_page4(request, pk):
+    showNar = create_e_naryad_table_4.objects.filter(id=pk)
+    
+
+    context={'showNar':showNar}
+
+    return render(request, 'showNar4.html', context)
 
 @login_required(login_url='login')
 def order_index(request):
