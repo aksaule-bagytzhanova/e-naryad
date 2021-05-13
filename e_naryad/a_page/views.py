@@ -24,17 +24,42 @@ def dictfetchall(cursor):
         for row in cursor.fetchall()
     ]
 
+def dictfetchone(cursor):
+    for one in cursor:
+        return one
 
 @login_required(login_url='login')
 def enar(request):
-    
-    return render(request, 'enar.html')
+    cursor = connection.cursor()
+    cursor.execute("SELECT COUNT(*) FROM a_page_сreate_e_naryad_table_1")
+    number = dictfetchone(cursor)
+    nu = number[0]
+
+    cursor1 = connection.cursor()
+    cursor1.execute("SELECT COUNT(*) FROM a_page_сreate_e_naryad_table_2")
+    number1 = dictfetchone(cursor1)
+    nu1 = number1[0]
+
+    cursor2 = connection.cursor()
+    cursor2.execute("SELECT COUNT(*) FROM a_page_create_e_naryad_table_3")
+    number2 = dictfetchone(cursor2)
+    nu2 = number2[0]
+
+    cursor3 = connection.cursor()
+    cursor3.execute("SELECT COUNT(*) FROM a_page_create_e_naryad_table_4")
+    number3 = dictfetchone(cursor3)
+    nu3 = number3[0]
+
+    context={'nu':nu, 'nu1':nu1,'nu2':nu2,'nu3':nu3}
+
+    return render(request, 'enar.html', context)
 
 
 
 @login_required(login_url='login')
 def create_nar_page1(request):
     form = CreateNar1Form()
+    
 
     if request.method == 'POST':
         # print('Printing POST: ', request.POST)
