@@ -153,7 +153,12 @@ def open_nar_page1(request):
 
 @login_required(login_url='login')
 def close_nar_page1(request):
-    return render(request, 'close_nar_page1.html')
+
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM a_page_сreate_e_naryad_table_1 INNER JOIN a_page_сreate_e_naryad_table_2 ON a_page_сreate_e_naryad_table_2.number_naryad = a_page_сreate_e_naryad_table_1.number_naryad INNER JOIN a_page_create_e_naryad_table_3 ON a_page_create_e_naryad_table_3.number_naryad = a_page_сreate_e_naryad_table_1.number_naryad INNER JOIN a_page_create_e_naryad_table_4 ON a_page_create_e_naryad_table_4.number_naryad = a_page_сreate_e_naryad_table_1.number_naryad INNER JOIN a_page_organization  ON a_page_сreate_e_naryad_table_1.organization_id=a_page_organization.id WHERE a_page_сreate_e_naryad_table_1.organization_id = a_page_сreate_e_naryad_table_2.organization_id AND a_page_сreate_e_naryad_table_2.organization_id = a_page_create_e_naryad_table_3.organization_id AND a_page_create_e_naryad_table_3.organization_id = a_page_create_e_naryad_table_4.organization_id AND a_page_сreate_e_naryad_table_1.work_manager_id = a_page_сreate_e_naryad_table_2.responsible_manager_id AND a_page_сreate_e_naryad_table_2.responsible_manager_id = a_page_create_e_naryad_table_3.responsible_manager_id AND a_page_create_e_naryad_table_3.responsible_manager_id = a_page_create_e_naryad_table_4.responsible_manager_id")
+    all = dictfetchall(cursor)
+    context={'all':all}
+    return render(request, 'close_nar_page1.html',context)
 
 @login_required(login_url='login')
 def show_nar_page1(request, pk):
