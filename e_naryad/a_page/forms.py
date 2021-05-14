@@ -67,7 +67,7 @@ class CreateNar2Form(ModelForm):
             'organization': widgets.Select(attrs={'class':'form-control select2'}),
             'enar_give': widgets.Select(attrs={'class':'form-control select2'}),
             'signature_enar_give': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
-            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
+            'responsible_manager': widgets.Select(attrs={'class':'form-control select2'}),
             'signature_responsible_manager': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'})
             
         }
@@ -84,7 +84,7 @@ class CreateNar3Form(ModelForm):
             'workplaces_prepared': widgets.Textarea(attrs={'class':'form-control', 'rows':'3', 'style':'margin-top: 0px; margin-bottom: 0px; height: 126px; width: 100%;'}),
             'agreed': widgets.TextInput(attrs={'class':'form-control'}),
             'admitting': widgets.Select(attrs={'class':'form-control select2'}),
-            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
+            'responsible_manager': widgets.Select(attrs={'class':'form-control select2'}),
             'organization': widgets.Select(attrs={'class':'form-control select2'})
         }
 
@@ -96,7 +96,7 @@ class CreateNar4Form(ModelForm):
             'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
             'reported': widgets.TextInput(attrs={'class':'form-control'}),
             'manufacturer': widgets.Select(attrs={'class':'form-control select2'}),
-            'responsible_manager': widgets.TextInput(attrs={'class':'form-control'}),
+            'responsible_manager': widgets.Select(attrs={'class':'form-control select2'}),
             'admitting': widgets.Select(attrs={'class':'form-control select2'}),
             'signature_manufacturer':widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
             'signature_responsible_manager': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),

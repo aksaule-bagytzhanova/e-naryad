@@ -10,7 +10,7 @@ class Employee(models.Model):
     password = models.CharField(max_length=200, null=True)
     name = models.CharField(max_length=200, null=True)
     surname = models.CharField(max_length=200, null=True)
-    profile_pic = models.ImageField(default='a.jpg',null=True, blank=True)
+    profile_pic = models.ImageField(null=True, blank=True)
     position = models.CharField(max_length=200, null=True)
 
     def __str__(self):
@@ -135,7 +135,7 @@ class сreate_e_naryad_table_2(models.Model):
     organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
     enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     signature_enar_give = models.ImageField(null=True, blank=True)
-    responsible_manager = models.CharField(max_length=200, null=True)
+    responsible_manager = models.ForeignKey(Work_manager, null=True, on_delete=models.SET_NULL)
     signature_responsible_manager = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -151,7 +151,7 @@ class create_e_naryad_table_3(models.Model):
     workplaces_prepared = models.TextField()
     agreed = models.CharField(max_length=200, null=True)
     admitting =  models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)
-    responsible_manager = models.CharField(max_length=200, null=True)
+    responsible_manager = models.ForeignKey(Work_manager, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return str(self.number_naryad)
@@ -161,7 +161,7 @@ class create_e_naryad_table_4(models.Model):
     reported = models.CharField(max_length=200, null=True)
     organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
     manufacturer = models.ForeignKey(Manufacturer, null=True, on_delete=models.SET_NULL)
-    responsible_manager = models.CharField(max_length=200, null=True)
+    responsible_manager = models.ForeignKey(Work_manager, null=True, on_delete=models.SET_NULL)
     admitting =  models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)
     signature_manufacturer = models.ImageField(null=True, blank=True)
     signature_responsible_manager = models.ImageField(null=True, blank=True)

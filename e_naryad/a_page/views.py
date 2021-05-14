@@ -50,7 +50,14 @@ def enar(request):
     number3 = dictfetchone(cursor3)
     nu3 = number3[0]
 
-    context={'nu':nu, 'nu1':nu1,'nu2':nu2,'nu3':nu3}
+    nu4 = nu1+nu2+nu3+nu
+
+    cursor5 = connection.cursor()
+    cursor5.execute("SELECT COUNT(*) FROM a_page_сreate_e_naryad_table_1 INNER JOIN a_page_сreate_e_naryad_table_2 ON a_page_сreate_e_naryad_table_2.number_naryad = a_page_сreate_e_naryad_table_1.number_naryad INNER JOIN a_page_create_e_naryad_table_3 ON a_page_create_e_naryad_table_3.number_naryad = a_page_сreate_e_naryad_table_1.number_naryad INNER JOIN a_page_create_e_naryad_table_4 ON a_page_create_e_naryad_table_4.number_naryad = a_page_сreate_e_naryad_table_1.number_naryad WHERE a_page_сreate_e_naryad_table_1.organization_id = a_page_сreate_e_naryad_table_2.organization_id AND a_page_сreate_e_naryad_table_2.organization_id = a_page_create_e_naryad_table_3.organization_id AND a_page_create_e_naryad_table_3.organization_id = a_page_create_e_naryad_table_4.organization_id AND a_page_сreate_e_naryad_table_1.work_manager_id = a_page_сreate_e_naryad_table_2.responsible_manager_id AND a_page_сreate_e_naryad_table_2.responsible_manager_id = a_page_create_e_naryad_table_3.responsible_manager_id AND a_page_create_e_naryad_table_3.responsible_manager_id = a_page_create_e_naryad_table_4.responsible_manager_id")
+    number5 = dictfetchone(cursor5)
+    nu5 = number5[0]
+
+    context={'nu':nu, 'nu1':nu1,'nu2':nu2,'nu3':nu3,'nu4':nu4,'nu5':nu5}
 
     return render(request, 'enar.html', context)
 
@@ -189,13 +196,13 @@ def show_nar_page4(request, pk):
 @login_required(login_url='login')
 def order_index(request):
 
-    cursor = connection.cursor()
-    cursor.execute("SELECT * FROM a_page_order")
-    orders = dictfetchall(cursor)
+    # cursor = connection.cursor()
+    # cursor.execute("SELECT * FROM a_page_order")
+    # orders = dictfetchall(cursor)
 
-    print(orders)
-    print(connection.queries)
-    # orders = Order.objects.all()
+    # print(orders)
+    # print(connection.queries)
+    orders = Order.objects.all()
     # print(orders)
 
     
@@ -368,18 +375,23 @@ def logOutPage(request):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
 def employee_list(request):
-    employee = Employee.objects.all()
-    employee_time = Employee_Time.objects.all()
-    context={'employee':employee, 'employee_time':employee_time}
+    cursor = connection.cursor()
+    cursor.execute("SELECT id,user_id, username, password, name, surname, position FROM a_page_employee ")
+    employee = dictfetchall(cursor)
+    
+    context={'employee':employee}
     return render(request, 'employee_list.html', context)
 
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
 def employee(request,pk_test):
-    employee = Employee.objects.filter(id=pk_test)
-    employee_time = Employee_Time.objects.filter(id=pk_test)
-    context={'employee':employee, 'employee_time':employee_time}
+    cursor = connection.cursor()
+    cursor.execute("SELECT user_id, username_id, profile_pic,user_id,name, surname, position, username, profile_pic, emp_h_at_work, holiday_h, sick_h FROM a_page_employee INNER JOIN a_page_employee_time ON a_page_employee_time.username_id = a_page_employee.id WHERE a_page_employee_time.username_id = '%s'" % pk_test)
+    employee = dictfetchall(cursor)
+
+    
+    context={'employee':employee}
     return render(request, 'employee.html', context)
 
 @login_required(login_url='login')

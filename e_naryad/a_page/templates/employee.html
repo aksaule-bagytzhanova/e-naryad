@@ -23,12 +23,12 @@
         <div class="card">
           <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
-              {% for i in employee %}
+            {% for i in employee %}
               <img src="{{i.profile_pic.url}}" alt="Admin" class="rounded-circle" width="150">
               <div class="mt-3">
                 <h4>{{i.name}} {{i.surname}}</h4>
               </div>
-              {% endfor %}
+              
             </div>
           </div>
         </div>
@@ -36,15 +36,14 @@
       </div>
       <div class="col-md-8">
         <div class="card mb-3">
-          {% for i in employee %}
-          {% for m in employee_time %}
+          
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
                 <h6 class="mb-0">Employee Id</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{i.user}}
+                {{i.username_id}}
               </div>
             </div>
             <hr>
@@ -83,7 +82,7 @@
                 <h6 class="mb-0">Employee Hours At Work</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{m.emp_h_at_work}}
+                {{i.emp_h_at_work}}
               </div>
             </div>
             <hr>
@@ -92,7 +91,7 @@
                 <h6 class="mb-0">Holiday Hours</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{m.holiday_h}}                
+                {{i.holiday_h}}                
               </div>
             </div>
             <hr>
@@ -101,19 +100,18 @@
                 <h6 class="mb-0">Sick Hours</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-              {{m.sick_h}}                
+              {{i.sick_h}}                
               </div>
             </div>
           </div>
-          {% endfor %}
+
           {% endfor %}
         </div>
        
       </div>
     </div>
   </div>
-</div>
-</div>
+
   </section>
 </div>
 {% endblock %}
