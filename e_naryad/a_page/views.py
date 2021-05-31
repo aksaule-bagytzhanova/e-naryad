@@ -400,6 +400,19 @@ def employee(request,pk_test):
     return render(request, 'employee.html', context)
 
 @login_required(login_url='login')
+def alltables(request):
+    cursor = connection.cursor()
+    cursor.execute("SELECT DISTINCT name, surname, password, position FROM a_page_employee INNER JOIN a_page_create_e_naryad_table_3 ON a_page_employee.username = a_page_create_e_naryad_table_3.agreed WHERE a_page_employee.username = 'Sultanov_Azamat'")
+    employee = dictfetchall(cursor)
+    
+    cursor1 = connection.cursor()
+    cursor1.execute("SELECT DISTINCT name, surname, password, position FROM a_page_employee a, a_page_create_e_naryad_table_3 b WHERE a.username = b.agreed AND a.username = 'Sultanov_Azamat'")
+    employee1 = dictfetchall(cursor1)
+
+    
+    context={'employee':employee, 'employee1':employee1}
+    return render(request, 'alltables.html', context)
+@login_required(login_url='login')
 @allowed_users(allowed_roles=['employees'])
 def flexi_time(request):
     return render(request, 'attendance/flexi_time.html')

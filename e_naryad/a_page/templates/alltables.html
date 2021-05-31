@@ -1,0 +1,82 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<br>
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+        
+        <!-- /.col -->
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Список наряд-допусков</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="container">
+              <table class="table table-bordered table-hover" id="myTable">
+                <thead>
+                  <tr>
+                    <th style="width: 50px">Name</th>
+                    <th style="width: 50px">Surname</th>
+                    <th style="width: 50px">Password</th>
+                    <th style="width: 50px">Position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in employee %}
+                  
+
+                  <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.surname}}</td>
+                    <td>{{i.password}}</td>
+                    <td>{{i.position}}</td>
+                  </tr>
+                  {% endfor %}
+
+                  {% for i in employee1 %}
+                  
+                  <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.surname}}</td>
+                    <td>{{i.password}}</td>
+                    <td>{{i.position}}</td>
+                  </tr>
+                  {% endfor %}
+
+                  
+
+
+
+
+                  
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+
+  </section>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+
+  {% endblock %}

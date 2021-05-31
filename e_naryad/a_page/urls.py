@@ -48,6 +48,8 @@ urlpatterns = [
     path('mess_index', views.messages_index, name='mess_index'),
     path('account_s', views.accountSettings, name='account_s'),
     path('timer', views.timer, name='timer'),
+    path('alltables/', views.alltables, name='alltables'),
+    
     
     
     
